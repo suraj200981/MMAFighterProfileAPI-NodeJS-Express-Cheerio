@@ -31,8 +31,6 @@ userAgent = randomUseragent.getRandom();
 
 //set req headers to random user agent
 req.headers['user-agent'] = userAgent;
-req.headers['User-Agent'] = userAgent;
-
 
     console.log(userAgent);
     //for now i will hard code what the req query params would be
