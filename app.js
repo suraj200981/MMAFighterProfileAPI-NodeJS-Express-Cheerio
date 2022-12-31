@@ -5,6 +5,7 @@ const cheerio = require('cheerio');
 const app = express();
 
 let data = [];
+let enhancedProfileUrlFoundOnPage ="";
 
 //home endpoint
 app.get('/api', (req, res) =>{
@@ -24,28 +25,49 @@ app.get('/api', (req, res) =>{
 app.get('/api/fighter', (req,res) => {
 
     //for now i will hard code what the req query params would be
-    let firstName = "khabib"
-    let lastName = "nurmagomedov"
+    let firstName = "conor"
+    let lastName = "mcgregor"
 
-    let urlToScrape = 'https://www.sherdog.com/stats/fightfinder?SearchTxt='+firstName+'+'+lastName+'&weight=&association=';
-    request(urlToScrape, (error, response, html) => {
+    let initalUrlToScrape = 'https://www.sherdog.com/stats/fightfinder?SearchTxt='+firstName+'+'+lastName+'&weight=&association=';
+    request(initalUrlToScrape, (error, response, html) => {
         if (!error && response.statusCode == 200) {
             const $ = cheerio.load(html);
 
+
             const fighterNameFound = $('.new_table td a');
+             enhancedProfileUrlFoundOnPage = $(fighterNameFound).attr('href')
 
-            //push data found to global array
 
-            const firstNameFoundOnPage = $(fighterNameFound).text();
-            const enhancedProfileUrlFoundOnPage = $(fighterNameFound).attr('href')
-            data.push({
-                fighterName: firstNameFoundOnPage,
-                profileUrl: enhancedProfileUrlFoundOnPage
-            })
+
+            //step 2
+             let profileUrlToScrape = 'https://www.sherdog.com'+enhancedProfileUrlFoundOnPage
+            console.log(profileUrlToScrape)
+             request(profileUrlToScrape, (error1, response1, html2) => {
+                console.log(response1.statusCode)
+                if (!error1 && response.statusCode == 200) {
+                    const $ = cheerio.load(html2);
+        
+                    const fullName = $('.fighter-title h1 .fn');
+                    const nickName = $('.fighter-title h1 .nickname, .fighter-title h1 .nickname_empty');
+            
+                    const fullname1 = $(fullName).text();
+                    const nickName1 = $(nickName).text();
+
+                    console.log(nickName1);
+                    
+                  //push data found to global array
+                  data.push({
+                    name: fullname1,
+                    nickname: nickName1
+                  })
+                
+                  res.send(data);
+                }
+                });
         }
-        res.send(data);
-    });
-});
+        });   
+
+        });
 
 
 
