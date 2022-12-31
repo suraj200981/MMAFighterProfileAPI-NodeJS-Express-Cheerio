@@ -28,14 +28,12 @@ app.get('/api/fighter', (req,res) => {
 
 let userAgent = "";
 userAgent = randomUseragent.getRandom();
-
 //set req headers to random user agent
 req.headers['user-agent'] = userAgent;
 
-    console.log(userAgent);
     //for now i will hard code what the req query params would be
-    let firstName = "khabib"
-    let lastName = "nurmag"
+    let firstName = "jon"
+    let lastName = "jones"
     //step 1 search for fighter to retreive fighter profile url
     let initalUrlToScrape = 'https://www.sherdog.com/stats/fightfinder?SearchTxt='+firstName+'+'+lastName+'&weight=&association=';
     //add more headers to the request
@@ -48,9 +46,6 @@ req.headers['user-agent'] = userAgent;
 
             //step 2 navigate to fighter profile url and scrape everything
             let profileUrlToScrape = 'https://www.sherdog.com'+enhancedProfileUrlFoundOnPage
-            
-           console.log("RESPONSE:::::",response);
-           globalResponse=response;
              request(profileUrlToScrape, {headers:{ 'User-Agent': req.headers['user-agent']}},(error1, response1, html2) => {
 
                 if (!error1 && response.statusCode == 200) {
@@ -61,6 +56,10 @@ req.headers['user-agent'] = userAgent;
                     const nickName = $('.fighter-title h1 .nickname, .fighter-title h1 .nickname_empty');
                     const birthCountry = $('.fighter-title .birthplace strong');
                     const fightingOutOf = $('span.locality');
+                    const flag = $('.fighter-title .big_flag');
+                    const wins = $('div.winloses.win span');
+                    const losses = $('div.winloses.lose span');
+                    const weightClass = $('body > div.wrapper > div.inner-wrapper > div.col-left > div > section:nth-child(3) > div > div.fighter-info > div.fighter-right > div.fighter-data > div.bio-holder > div > a');
 
                     
                     //scrape the data
@@ -68,6 +67,12 @@ req.headers['user-agent'] = userAgent;
                     const nickNameValue = $(nickName).text();
                     const birthCountryValue = $(birthCountry).text();
                     const fightingOutOfValue = $(fightingOutOf).text();
+                    const flagValue = $(flag).attr('src');
+                    const winsValue = $(wins).text();
+                    const lossesValue = $(losses).text();
+                    const weightClassValue = $(weightClass).text();
+                    
+           
 
                   //push data found to global array
                   data.push({
@@ -75,9 +80,15 @@ req.headers['user-agent'] = userAgent;
                     nickname: nickNameValue,
                     country: birthCountryValue,
                     fightingOutOf: fightingOutOfValue,
+                    flag: "https://www.sherdog.com"+flagValue,
+                    wins: winsValue.replace("Wins",""),
+                    losses: lossesValue.replace("Losses",""),
+                    weightClass: weightClassValue
+
+                    
 
                   })
-                  res.send(globalResponse);
+                  res.send(data);
                 }
                 });
         }
