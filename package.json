@@ -1,0 +1,17 @@
+{
+  "name": "mmafighterprofileapi",
+  "version": "1.0.0",
+  "description": "This is an API for comparing mma fighter profiles and anayling who would win",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Suraj Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
