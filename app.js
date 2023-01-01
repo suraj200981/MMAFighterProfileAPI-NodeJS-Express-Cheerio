@@ -52,6 +52,7 @@ app.get("/api/fighter", (req, res) => {
     { headers: { "User-Agent": req.headers["user-agent"] } },
     (error, response, html) => {
       if (!error && response.statusCode == 200) {
+        getFighterBlocks(html);
         const $ = cheerio.load(html);
 
         let fighterNameFound = $(
@@ -170,11 +171,18 @@ app.listen(8080, () => {
   console.log("MMA Fighter API started on http://localhost:8080/");
 });
 
-function getFighterBlocks() {
+function getFighterBlocks(html) {
   const $ = cheerio.load(html);
   let figherBlocks = [];
+  let fighterNameIndex = $(".new_table td a");
   let fighterNameFound = $(
     "html.light .new_table tr:nth-child(even):not(.table_head)"
   );
-  let fighterNameIndex = $(".new_table td a");
+
+  $(fighterNameFound).each((x) => {
+    // let fighterNameIndex = $(x).find(".new_table td a");
+    console.log(fighterNameIndex[x].children[0].data.toLowerCase());
+    figherBlocks.push(fighterNameIndex);
+  });
+  return figherBlocks;
 }
