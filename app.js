@@ -47,129 +47,51 @@ app.get("/api/fighter", (req, res) => {
     lastName +
     "&weight=&association=";
   //add more headers to the request
-  request(
-    initalUrlToScrape,
-    { headers: { "User-Agent": req.headers["user-agent"] } },
-    (error, response, html) => {
-      if (!error && response.statusCode == 200) {
-        getFighterBlocks(html);
-        const $ = cheerio.load(html);
-
-        let fighterNameFound = $(
-          "html.light .new_table tr:nth-child(even):not(.table_head)"
-        );
-        let fighterNameIndex = $(".new_table td a");
-        let nameToCompare = firstName + " " + lastName;
-        let fighterFound = false;
-        let next = 0;
-        let page = 1;
-        // while (!fighterFound) {
-
-        //     console.log(fighterNameIndex[next].children[0].data.toLowerCase());
-
-        //     if(fighterNameIndex[next].children[0].data.toLowerCase() == nameToCompare.toLowerCase()){
-        //         fighterNameIndex = fighterNameIndex[next];
-        //         console.log(fighterNameIndex.attribs.href);
-        //         break;
-        //     }else if(next==fighterNameFound.length-1){
-        //         next=0;
-        //        //axios request for next page. update the fighterNameIndex and fighterNameFound
-        //          axios({
-        //             url: 'https://www.sherdog.com/stats/fightfinder?association=&weightclass=&SearchTxt=jon+jones&page=2',
-        //           }).then(function (response) {
-        //             response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
-        //           })
-        //         .catch(error3 => {
-        //             console.log(error3);
-        //         });
-        //     }else{
-        //         next++;
-        //     }
-        // }
-        for (let x = 0; x < fighterNameFound.length; x++) {
-          // console.log(fighterNameIndex.attribs.href);
-          // fighterNameIndex = fighterNameIndex[x];
-          // console.log(fighterNameIndex.attribs.href);
-          console.log(fighterNameIndex[x].children[0].data.toLowerCase());
-          //check if the fighter name found is the same as the one we are looking for
-          if (
-            fighterNameIndex[x].children[0].data.toLowerCase() ==
-            nameToCompare.toLowerCase()
-          ) {
-            fighterNameIndex = fighterNameIndex[x];
-            console.log(fighterNameIndex.attribs.href);
-            break;
-          }
-          if (x == fighterNameFound.length - 1) {
-            x = 0;
-            // axios({ url: 'https://www.sherdog.com/stats/fightfinder?association=&weightclass=&SearchTxt=jon+jones&page=2',
-            //             }).then(function (response) {
-            //               response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
-            //             })
-            //           .catch(error3 => {
-            //               console.log(error3);
-            //           });
-          }
-        }
-        enhancedProfileUrlFoundOnPage = fighterNameIndex.attribs.href;
-
-        //step 2 navigate to fighter profile url and scrape everything
-        let profileUrlToScrape =
-          "https://www.sherdog.com" + enhancedProfileUrlFoundOnPage;
-        request(
-          profileUrlToScrape,
-          { headers: { "User-Agent": req.headers["user-agent"] } },
-          (error1, response1, html2) => {
-            if (!error1 && response1.statusCode == 200) {
-              const $ = cheerio.load(html2);
-
-              //find element
-              const fullName = $(".fighter-title h1 .fn");
-              const nickName = $(
-                ".fighter-title h1 .nickname, .fighter-title h1 .nickname_empty"
-              );
-              const birthCountry = $(".fighter-title .birthplace strong");
-              const fightingOutOf = $("span.locality");
-              const flag = $(".fighter-title .big_flag");
-              const wins = $("div.winloses.win span");
-              const losses = $("div.winloses.lose span");
-              const weightClass = $(
-                "body > div.wrapper > div.inner-wrapper > div.col-left > div > section:nth-child(3) > div > div.fighter-info > div.fighter-right > div.fighter-data > div.bio-holder > div > a"
-              );
-
-              //scrape the data
-              const fullnameValue = $(fullName).text();
-              const nickNameValue = $(nickName).text();
-              const birthCountryValue = $(birthCountry).text();
-              const fightingOutOfValue = $(fightingOutOf).text();
-              const flagValue = $(flag).attr("src");
-              const winsValue = $(wins).text();
-              const lossesValue = $(losses).text();
-              const weightClassValue = $(weightClass).text();
-
-              //push data found to global array
-              data.push({
-                name: fullnameValue,
-                nickname: nickNameValue,
-                country: birthCountryValue,
-                fightingOutOf: fightingOutOfValue,
-                flag: "https://www.sherdog.com" + flagValue,
-                wins: winsValue.replace("Wins", ""),
-                losses: lossesValue.replace("Losses", ""),
-                weightClass: weightClassValue,
-              });
-              res.send(data);
-            }
-          }
-        );
+  let arr = [];
+  step1(initalUrlToScrape, req, res)
+    .then((figherBlocks) => {
+      //for loop to loop through each fighter block
+      for (let i = 0; i < figherBlocks[0].length; i++) {
+        console.log(figherBlocks[0][i].children[0].data.toLowerCase());
+        //log the href
+        console.log(figherBlocks[0][i].attribs.href);
       }
-    }
-  );
+    })
+    .catch((error) => {
+      // Handle any errors here
+    });
 });
 
 app.listen(8080, () => {
   console.log("MMA Fighter API started on http://localhost:8080/");
 });
+
+function step1(initalUrlToScrape, req, res) {
+  return new Promise((resolve, reject) => {
+    request(
+      initalUrlToScrape,
+      { headers: { "User-Agent": req.headers["user-agent"] } },
+      (error, response, html) => {
+        if (!error && response.statusCode == 200) {
+          const $ = cheerio.load(html);
+          let fighterNameIndex = $(".new_table td a");
+
+          let figherBlocks = [];
+
+          $(fighterNameIndex).each((x) => {
+            // console.log(fighterNameIndex[x].children[0].data.toLowerCase());
+            // fighterBlocks.push(fighterNameIndex[x]);
+            figherBlocks.push(fighterNameIndex);
+          });
+
+          resolve(figherBlocks);
+        } else {
+          reject(error);
+        }
+      }
+    );
+  });
+}
 
 function getFighterBlocks(html) {
   const $ = cheerio.load(html);
@@ -180,9 +102,14 @@ function getFighterBlocks(html) {
   );
 
   $(fighterNameFound).each((x) => {
-    // let fighterNameIndex = $(x).find(".new_table td a");
-    console.log(fighterNameIndex[x].children[0].data.toLowerCase());
+    // console.log(fighterNameIndex[x].children[0].data.toLowerCase());
     figherBlocks.push(fighterNameIndex);
   });
   return figherBlocks;
+}
+
+function getFighterNameIndex(html) {
+  const $ = cheerio.load(html);
+  let fighterNameIndex = $(".new_table td a");
+  return fighterNameIndex;
 }
