@@ -10,6 +10,8 @@ const app = express();
 let data = [];
 let enhancedProfileUrlFoundOnPage = "";
 
+let fighterNameFound = false;
+
 //home endpoint
 app.get("/api", (req, res) => {
   let userAgent = "";
@@ -28,45 +30,62 @@ app.get("/api", (req, res) => {
   res.send(html);
 });
 
-let globalResponse;
-//this endpoint will scrape fighter profiles
+// define a global variable to keep track of the current page number
+let pageNumber = 1;
+
+// this endpoint will scrape fighter profiles
 app.get("/api/fighter", (req, res) => {
   let userAgent = "";
   userAgent = randomUseragent.getRandom();
-  //set req headers to random user agent
+  // set req headers to random user agent
   req.headers["user-agent"] = userAgent;
 
-  //for now i will hard code what the req query params would be
+  // for now I will hard code what the req query params would be
   let firstName = "jon";
   let lastName = "jones";
-  //step 1 search for fighter to retreive fighter profile url
-  let initalUrlToScrape =
-    "https://www.sherdog.com/stats/fightfinder?SearchTxt=" +
-    firstName +
-    "+" +
-    lastName +
-    "&weight=&association=";
-  //add more headers to the request
-  let arr = [];
-  step1(initalUrlToScrape, req, res)
-    .then((figherBlocks) => {
-      //for loop to loop through each fighter block
-      for (let i = 0; i < figherBlocks[0].length; i++) {
-        console.log(figherBlocks[0][i].children[0].data.toLowerCase());
-        //log the href
-        console.log(figherBlocks[0][i].attribs.href);
+
+  // initialize a variable to keep track of whether the fighter name has been found
+  let fighterNameFound = false;
+
+  // define a function to scrape the fighter blocks from a single page
+  function scrapePage(pageNumber) {
+    let url = `https://www.sherdog.com/stats/fightfinder?association=&weightclass=&SearchTxt=${firstName}+${lastName}&page=${pageNumber}`;
+    return step1(url, req);
+  }
+
+  // use a loop to repeatedly scrape the next page until the fighter name is found
+  (async function loop() {
+    while (!fighterNameFound) {
+      console.log(`Searching page ${pageNumber}...`);
+      try {
+        let figherBlocks = await scrapePage(pageNumber);
+        for (let i = 0; i < figherBlocks.length; i++) {
+          // if the fighter name matches the query params
+          if (
+            figherBlocks[i].name.toLowerCase() ==
+            (firstName + " " + lastName).toLowerCase()
+          ) {
+            // get the enhanced profile url
+            let enhancedProfileUrlFoundOnPage =
+              "https://www.sherdog.com" + figherBlocks[i].href;
+            console.log(`Found profile at ${enhancedProfileUrlFoundOnPage}`);
+            // set the flag to exit the loop
+            fighterNameFound = true;
+            break;
+          }
+        }
+        // increment the page number
+        pageNumber++;
+      } catch (error) {
+        console.log(error);
       }
-    })
-    .catch((error) => {
-      // Handle any errors here
-    });
+    }
+  })();
+
+  step2(enhancedProfileUrlFoundOnPage, res, req);
 });
 
-app.listen(8080, () => {
-  console.log("MMA Fighter API started on http://localhost:8080/");
-});
-
-function step1(initalUrlToScrape, req, res) {
+function step1(initalUrlToScrape, req) {
   return new Promise((resolve, reject) => {
     request(
       initalUrlToScrape,
@@ -75,13 +94,13 @@ function step1(initalUrlToScrape, req, res) {
         if (!error && response.statusCode == 200) {
           const $ = cheerio.load(html);
           let fighterNameIndex = $(".new_table td a");
-
           let figherBlocks = [];
 
           $(fighterNameIndex).each((x) => {
-            // console.log(fighterNameIndex[x].children[0].data.toLowerCase());
-            // fighterBlocks.push(fighterNameIndex[x]);
-            figherBlocks.push(fighterNameIndex);
+            figherBlocks.push({
+              href: fighterNameIndex[x].attribs.href,
+              name: fighterNameIndex[x].children[0].data,
+            });
           });
 
           resolve(figherBlocks);
@@ -93,23 +112,58 @@ function step1(initalUrlToScrape, req, res) {
   });
 }
 
-function getFighterBlocks(html) {
-  const $ = cheerio.load(html);
-  let figherBlocks = [];
-  let fighterNameIndex = $(".new_table td a");
-  let fighterNameFound = $(
-    "html.light .new_table tr:nth-child(even):not(.table_head)"
+//step 2 navigate to fighter profile url and scrape everything
+function step2(enhancedProfileUrlFoundOnPage, res, req) {
+  let profileUrlToScrape =
+    "https://www.sherdog.com" + enhancedProfileUrlFoundOnPage;
+  request(
+    profileUrlToScrape,
+    { headers: { "User-Agent": req.headers["user-agent"] } },
+    (error1, response1, html2) => {
+      if (!error1 && response1.statusCode == 200) {
+        const $ = cheerio.load(html2);
+
+        //find element
+        const fullName = $(".fighter-title h1 .fn");
+        const nickName = $(
+          ".fighter-title h1 .nickname, .fighter-title h1 .nickname_empty"
+        );
+        const birthCountry = $(".fighter-title .birthplace strong");
+        const fightingOutOf = $("span.locality");
+        const flag = $(".fighter-title .big_flag");
+        const wins = $("div.winloses.win span");
+        const losses = $("div.winloses.lose span");
+        const weightClass = $(
+          "body > div.wrapper > div.inner-wrapper > div.col-left > div > section:nth-child(3) > div > div.fighter-info > div.fighter-right > div.fighter-data > div.bio-holder > div > a"
+        );
+
+        //scrape the data
+        const fullnameValue = $(fullName).text();
+        const nickNameValue = $(nickName).text();
+        const birthCountryValue = $(birthCountry).text();
+        const fightingOutOfValue = $(fightingOutOf).text();
+        const flagValue = $(flag).attr("src");
+        const winsValue = $(wins).text();
+        const lossesValue = $(losses).text();
+        const weightClassValue = $(weightClass).text();
+
+        //push data found to global array
+        data.push({
+          name: fullnameValue,
+          nickname: nickNameValue,
+          country: birthCountryValue,
+          fightingOutOf: fightingOutOfValue,
+          flag: "https://www.sherdog.com" + flagValue,
+          wins: winsValue.replace("Wins", ""),
+          losses: lossesValue.replace("Losses", ""),
+          weightClass: weightClassValue,
+        });
+        res.send(data);
+      }
+    }
   );
-
-  $(fighterNameFound).each((x) => {
-    // console.log(fighterNameIndex[x].children[0].data.toLowerCase());
-    figherBlocks.push(fighterNameIndex);
-  });
-  return figherBlocks;
 }
 
-function getFighterNameIndex(html) {
-  const $ = cheerio.load(html);
-  let fighterNameIndex = $(".new_table td a");
-  return fighterNameIndex;
-}
+app.listen(8080, () => {
+  console.log("MMA Fighter API started on http://localhost:8080/");
+});
