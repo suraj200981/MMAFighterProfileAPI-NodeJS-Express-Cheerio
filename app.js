@@ -39,9 +39,8 @@ app.get("/api/fighter", async (req, res) => {
   // set req headers to random user agent
   req.headers["user-agent"] = userAgent;
 
-  // for now I will hard code what the req query params would be
-  let firstName = "jon";
-  let lastName = "jones";
+  let firstName = req.query.firstName;
+  let lastName = req.query.lastName;
 
   // initialize a variable to keep track of whether the fighter name has been found
   let fighterNameFound = false;
