@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Conor McGregor",
+    "nickname": "\"Notorious\"",
+    "country": "Ireland",
+    "fightingOutOf": "Dublin",
+    "flag": "https://www.sherdog.com/img/flags/big/ie.png",
+    "wins": "22",
+    "losses": "6",
+    "weightClass": "Lightweight"
+  },
+  {
+    "name": "Jon Jones",
+    "nickname": "\"Bones\"",
+    "country": "United States",
+    "fightingOutOf": "Rochester, New York",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "26",
+    "losses": "1",
+    "weightClass": "Light Heavyweight"
+  }
+]

@@ -134,7 +134,6 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
 
           //scrape the data
           const fullnameValue = $(fullName).text();
-          console.log(fullnameValue);
           const nickNameValue = $(nickName).text();
           const birthCountryValue = $(birthCountry).text();
           const fightingOutOfValue = $(fightingOutOf).text();
@@ -155,7 +154,9 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
             weightClass: weightClassValue,
           });
 
-          res.send(data);
+          console.log("Profile scraped successfully!");
+
+          // res.send(data);
 
           let jsonObject = JSON.stringify(data);
           if (!fs.existsSync("FighterProfiles.json")) {
@@ -164,7 +165,12 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
             //check if same fighter already exists in file
             let check = fs.readFileSync("FighterProfiles.json");
             let checkJson = JSON.parse(check);
+            checkJson.forEach(function (val) {
+              let checkName = val.name;
+              console.log("Name: ", checkName);
+            });
             let checkName = checkJson[0].name;
+            console.log(checkName, "checking name");
             let checkNickname = checkJson[0].nickname;
             let checkCountry = checkJson[0].country;
             let checkFightingOutOf = checkJson[0].fightingOutOf;
@@ -184,9 +190,19 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
               checkWeightClass == data[0].weightClass
             ) {
               console.log("Fighter already exists in file");
+              res.send("Fighter already exists in file!");
             } else {
-              //append to file
-              fs.appendFileSync("FighterProfiles.json", jsonObject);
+              //read json file and append new data to the array
+              let json = fs.readFileSync("FighterProfiles.json");
+              let jsonParse = JSON.parse(json);
+              jsonParse.push(data[0]);
+              let newJson = JSON.stringify(jsonParse);
+              fs.writeFileSync("FighterProfiles.json", newJson);
+
+              res.send(
+                "Scraped data added to json file!\n\n " +
+                  "go too /api/allProfiles to see all fighters"
+              );
             }
           }
           resolve(data);
