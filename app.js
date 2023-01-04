@@ -2,8 +2,7 @@ const express = require("express");
 const request = require("request");
 const cheerio = require("cheerio");
 const randomUseragent = require("random-useragent");
-const axios = require("axios");
-const https = require("https");
+const fs = require("fs");
 
 const app = express();
 
@@ -29,11 +28,10 @@ app.get("/api", (req, res) => {
   res.send(html);
 });
 
-// define a global variable to keep track of the current page number
-let pageNumber = 1;
-
 // this endpoint will scrape fighter profiles
 app.get("/api/fighter", async (req, res) => {
+  // define a local variable to keep track of the current page number
+  let pageNumber = 1;
   let userAgent = "";
   userAgent = randomUseragent.getRandom();
   // set req headers to random user agent
@@ -158,6 +156,39 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
           });
 
           res.send(data);
+
+          let jsonObject = JSON.stringify(data);
+          if (!fs.existsSync("FighterProfiles.json")) {
+            fs.writeFileSync("FighterProfiles.json", jsonObject);
+          } else {
+            //check if same fighter already exists in file
+            let check = fs.readFileSync("FighterProfiles.json");
+            let checkJson = JSON.parse(check);
+            let checkName = checkJson[0].name;
+            let checkNickname = checkJson[0].nickname;
+            let checkCountry = checkJson[0].country;
+            let checkFightingOutOf = checkJson[0].fightingOutOf;
+            let checkFlag = checkJson[0].flag;
+            let checkWins = checkJson[0].wins;
+            let checkLosses = checkJson[0].losses;
+            let checkWeightClass = checkJson[0].weightClass;
+
+            if (
+              checkName == data[0].name &&
+              checkNickname == data[0].nickname &&
+              checkCountry == data[0].country &&
+              checkFightingOutOf == data[0].fightingOutOf &&
+              checkFlag == data[0].flag &&
+              checkWins == data[0].wins &&
+              checkLosses == data[0].losses &&
+              checkWeightClass == data[0].weightClass
+            ) {
+              console.log("Fighter already exists in file");
+            } else {
+              //append to file
+              fs.appendFileSync("FighterProfiles.json", jsonObject);
+            }
+          }
           resolve(data);
         } else {
           reject(error1);
