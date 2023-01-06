@@ -1,10 +1,42 @@
-{
-  "name": "Conor McGregor",
-  "nickname": "\"Notorious\"",
-  "country": "Ireland",
-  "fightingOutOf": "Dublin",
-  "flag": "https://www.sherdog.com/img/flags/big/ie.png",
-  "wins": "22",
-  "losses": "6",
-  "weightClass": "Lightweight"
-}
+[
+  {
+    "name": "Conor McGregor",
+    "nickname": "\"Notorious\"",
+    "country": "Ireland",
+    "fightingOutOf": "Dublin",
+    "flag": "https://www.sherdog.com/img/flags/big/ie.png",
+    "wins": "22",
+    "losses": "6",
+    "weightClass": "Lightweight"
+  },
+  {
+    "name": "Daniel Cormier",
+    "nickname": "\"DC\"",
+    "country": "United States",
+    "fightingOutOf": "San Jose, California",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "22",
+    "losses": "3",
+    "weightClass": "Heavyweight"
+  },
+  {
+    "name": "Jon Jones",
+    "nickname": "\"Bones\"",
+    "country": "United States",
+    "fightingOutOf": "Rochester, New York",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "26",
+    "losses": "1",
+    "weightClass": "Light Heavyweight"
+  },
+  {
+    "name": "Conor McGregor",
+    "nickname": "\"Notorious\"",
+    "country": "Ireland",
+    "fightingOutOf": "Dublin",
+    "flag": "https://www.sherdog.com/img/flags/big/ie.png",
+    "wins": "22",
+    "losses": "6",
+    "weightClass": "Lightweight"
+  }
+]

@@ -167,12 +167,15 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
           // console.log(jsonObject);
 
           if (!fs.existsSync("FighterProfiles.json")) {
+            jsonObject = JSON.stringify(data);
             fs.writeFileSync("FighterProfiles.json", jsonObject);
           } else {
             //check if same fighter already exists in file
+            //[][]
             let check = fs.readFileSync("FighterProfiles.json");
             let checkJson = JSON.parse(check);
 
+            console.log(checkJson.length);
             for (let x = 0; x < checkJson.length; x++) {
               let checkName = checkJson[x].name;
               let checkNickname = checkJson[x].nickname;
@@ -197,22 +200,13 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
                 return res.send("Fighter already exists in file!");
               }
             }
-            // //read json file and append new data to the array
-            // let json = fs.readFileSync("FighterProfiles.json");
-            // let jsonParse = JSON.parse(json); // current json data
-            // jsonParse.push(data);//
-            // let newJson = JSON.stringify(jsonParse);
-            // fs.writeFileSync("FighterProfiles.json", newJson);
 
-            //read json file and append new data to the array
-            let json1 = fs.readFileSync("FighterProfiles.json");
-            let jsonParse = JSON.parse(json1);
-            jsonParse[0].push(jsonObject);
-            let newJson = JSON.stringify(jsonParse);
-            fs.writeFileSync("FighterProfiles.json", newJson);
-            // let updatedJsonObject = JSON.stringify(jsonParse);
-            fs.writeFileSync("FighterProfiles.json", updatedJsonObject);
+            checkJson.push(JSON.parse(jsonObject));
 
+            // stringify the updated array
+            let updatedData = JSON.stringify(checkJson);
+            // write the updated data to the file
+            fs.writeFileSync("FighterProfiles.json", updatedData);
             res.send(
               "Scraped data added to json file!\n\n " +
                 "Go too /api/allProfiles to see all fighters"
