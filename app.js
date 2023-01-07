@@ -133,6 +133,7 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
           const weightClass = $(
             "body > div.wrapper > div.inner-wrapper > div.col-left > div > section:nth-child(3) > div > div.fighter-info > div.fighter-right > div.fighter-data > div.bio-holder > div > a"
           );
+          const fighterImage = $(".fighter-info .profile-image-mobile");
 
           //scrape the data
           const fullnameValue = $(fullName).text();
@@ -143,6 +144,7 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
           const winsValue = $(wins).text();
           const lossesValue = $(losses).text();
           const weightClassValue = $(weightClass).text();
+          const fighterImageValue = $(fighterImage).attr("src");
 
           //push data found to global array
           data.push({
@@ -154,6 +156,7 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
             wins: winsValue.replace("Wins", ""),
             losses: lossesValue.replace("Losses", ""),
             weightClass: weightClassValue,
+            image: "https://www.sherdog.com" + fighterImageValue,
           });
 
           console.log("Profile scraped successfully!");
@@ -180,6 +183,7 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
               let checkWins = checkJson[x].wins;
               let checkLosses = checkJson[x].losses;
               let checkWeightClass = checkJson[x].weightClass;
+              let checkFighterImage = checkJson[x].image;
 
               if (
                 checkName == fullnameValue &&
@@ -189,7 +193,9 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
                 checkFlag == "https://www.sherdog.com" + flagValue &&
                 checkWins == winsValue.replace("Wins", "") &&
                 checkLosses == lossesValue.replace("Losses", "") &&
-                checkWeightClass == weightClassValue
+                checkWeightClass == weightClassValue &&
+                checkFighterImage ==
+                  "https://www.sherdog.com" + fighterImageValue
               ) {
                 console.log("Fighter already exists in file");
                 data = []; //empty the global data array

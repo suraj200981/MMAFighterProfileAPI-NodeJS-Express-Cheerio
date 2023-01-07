@@ -48,5 +48,16 @@
     "wins": "29",
     "losses": "0",
     "weightClass": "Lightweight"
+  },
+  {
+    "name": "Khabib Nurmagomedov",
+    "nickname": "\"The Eagle\"",
+    "country": "Russia",
+    "fightingOutOf": "Makhachkala, Dagestan",
+    "flag": "https://www.sherdog.com/img/flags/big/ru.png",
+    "wins": "29",
+    "losses": "0",
+    "weightClass": "Lightweight",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331075707_Khabib_Nurmagomedov_ff.JPG"
   }
 ]
