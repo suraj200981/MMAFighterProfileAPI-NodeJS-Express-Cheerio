@@ -112,6 +112,7 @@ function step1(initalUrlToScrape, req, res) {
 }
 
 function step2(enhancedProfileUrlFoundOnPage, res, req) {
+  let updateRecord = false;
   return new Promise((resolve, reject) => {
     request(
       enhancedProfileUrlFoundOnPage,
@@ -201,6 +202,29 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
                 data = []; //empty the global data array
                 return res.send("Fighter already exists in file!");
               }
+              //if record exists but information is missing and needs updating
+              else if (
+                checkJson[x].name == fullnameValue &&
+                checkJson[x].nickname == nickNameValue
+              ) {
+                checkJson[x].birthCountry = birthCountryValue;
+                checkJson[x].fightingOutOf = fightingOutOfValue;
+                checkJson[x].flag = "https://www.sherdog.com" + flagValue;
+                checkJson[x].wins = winsValue.replace("Wins", "");
+                checkJson[x].losses = lossesValue.replace("Losses", "");
+                checkJson[x].weightClass = weightClassValue;
+                checkJson[x].image =
+                  "https://www.sherdog.com" + fighterImageValue;
+                console.log(checkJson[x].image);
+                console.log("Fighter profile updated for: ", fullnameValue);
+                updateRecord = true;
+              }
+            }
+
+            if (updateRecord) {
+              let updatedData = JSON.stringify(checkJson);
+              fs.writeFileSync("FighterProfiles.json", updatedData);
+              return res.send(`Fighter profile updated for: ` + fullnameValue);
             }
 
             checkJson.push(JSON.parse(jsonObject));
