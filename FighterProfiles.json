@@ -7,7 +7,9 @@
     "flag": "https://www.sherdog.com/img/flags/big/ie.png",
     "wins": "22",
     "losses": "6",
-    "weightClass": "Lightweight"
+    "weightClass": "Lightweight",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325093124_Conor_McGregor_ff.JPG",
+    "birthCountry": "Ireland"
   },
   {
     "name": "Daniel Cormier",
@@ -27,7 +29,9 @@
     "flag": "https://www.sherdog.com/img/flags/big/us.png",
     "wins": "26",
     "losses": "1",
-    "weightClass": "Light Heavyweight"
+    "weightClass": "Light Heavyweight",
+    "birthCountry": "United States",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331052526_Jon_Jones_ff.JPG"
   },
   {
     "name": "Kevin Lee",
@@ -47,17 +51,19 @@
     "flag": "https://www.sherdog.com/img/flags/big/ru.png",
     "wins": "29",
     "losses": "0",
-    "weightClass": "Lightweight"
+    "weightClass": "Lightweight",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331075707_Khabib_Nurmagomedov_ff.JPG",
+    "birthCountry": "Russia"
   },
   {
-    "name": "Khabib Nurmagomedov",
-    "nickname": "\"The Eagle\"",
-    "country": "Russia",
-    "fightingOutOf": "Makhachkala, Dagestan",
-    "flag": "https://www.sherdog.com/img/flags/big/ru.png",
-    "wins": "29",
-    "losses": "0",
-    "weightClass": "Lightweight",
-    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331075707_Khabib_Nurmagomedov_ff.JPG"
+    "name": "Alexander Volkanovski",
+    "nickname": "\"The Great\"",
+    "country": "Australia",
+    "fightingOutOf": "Windang, New South Wales",
+    "flag": "https://www.sherdog.com/img/flags/big/au.png",
+    "wins": "25",
+    "losses": "1",
+    "weightClass": "Featherweight",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325081549_Alexander_Volkanovski_ff.JPG"
   }
 ]
