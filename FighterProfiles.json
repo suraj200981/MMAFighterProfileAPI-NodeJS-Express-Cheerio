@@ -30,13 +30,23 @@
     "weightClass": "Light Heavyweight"
   },
   {
-    "name": "Conor McGregor",
-    "nickname": "\"Notorious\"",
-    "country": "Ireland",
-    "fightingOutOf": "Dublin",
-    "flag": "https://www.sherdog.com/img/flags/big/ie.png",
-    "wins": "22",
-    "losses": "6",
+    "name": "Kevin Lee",
+    "nickname": "\"The Motown Phenom\"",
+    "country": "United States",
+    "fightingOutOf": "Grand Rapids, Michigan",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "19",
+    "losses": "7",
+    "weightClass": "Welterweight"
+  },
+  {
+    "name": "Khabib Nurmagomedov",
+    "nickname": "\"The Eagle\"",
+    "country": "Russia",
+    "fightingOutOf": "Makhachkala, Dagestan",
+    "flag": "https://www.sherdog.com/img/flags/big/ru.png",
+    "wins": "29",
+    "losses": "0",
     "weightClass": "Lightweight"
   }
 ]

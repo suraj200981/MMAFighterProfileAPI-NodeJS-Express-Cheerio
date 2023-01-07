@@ -7,8 +7,6 @@ const fs = require("fs");
 const app = express();
 
 let data = [];
-let enhancedProfileUrlFoundOnPage = "";
-let fighterNameFound = false;
 
 //home endpoint
 app.get("/api", (req, res) => {
@@ -31,7 +29,6 @@ app.get("/api", (req, res) => {
 // this endpoint will scrape fighter profiles
 app.get("/api/fighter", async (req, res) => {
   // define a local variable to keep track of the current page number
-  let pageNumber = 1;
   let userAgent = "";
   userAgent = randomUseragent.getRandom();
   // set req headers to random user agent
@@ -161,10 +158,8 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
 
           console.log("Profile scraped successfully!");
 
-          // res.send(data);
-
           let jsonObject = JSON.stringify(data[0]);
-          // console.log(jsonObject);
+          console.log("Checking json object in step 2", jsonObject);
 
           if (!fs.existsSync("FighterProfiles.json")) {
             jsonObject = JSON.stringify(data);
@@ -197,6 +192,7 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
                 checkWeightClass == weightClassValue
               ) {
                 console.log("Fighter already exists in file");
+                data = []; //empty the global data array
                 return res.send("Fighter already exists in file!");
               }
             }
