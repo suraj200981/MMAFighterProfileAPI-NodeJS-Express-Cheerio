@@ -135,6 +135,18 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
             "body > div.wrapper > div.inner-wrapper > div.col-left > div > section:nth-child(3) > div > div.fighter-info > div.fighter-right > div.fighter-data > div.bio-holder > div > a"
           );
           const fighterImage = $(".fighter-info .profile-image-mobile");
+          const fighterHeight = $(
+            "body > div.wrapper > div.inner-wrapper > div.col-left > div > section:nth-child(3) > div > div.fighter-info > div.fighter-right > div.fighter-data > div.bio-holder > table > tbody > tr:nth-child(2) > td:nth-child(2) > b"
+          );
+          const fighterKoTkoWins = $(
+            "body > div.wrapper > div.inner-wrapper > div.col-left > div > section:nth-child(3) > div > div.fighter-info > div.fighter-right > div.fighter-data > div.winsloses-holder > div.wins > div:nth-child(3) > div.pl"
+          );
+          const figtherSubmissionWins = $(
+            "body > div.wrapper > div.inner-wrapper > div.col-left > div > section:nth-child(3) > div > div.fighter-info > div.fighter-right > div.fighter-data > div.winsloses-holder > div.wins > div:nth-child(5) > div.pl"
+          );
+          const figtherDecisonsWins = $(
+            "body > div.wrapper > div.inner-wrapper > div.col-left > div > section:nth-child(3) > div > div.fighter-info > div.fighter-right > div.fighter-data > div.winsloses-holder > div.wins > div:nth-child(7) > div.pl"
+          );
 
           //scrape the data
           const fullnameValue = $(fullName).text();
@@ -146,7 +158,10 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
           const lossesValue = $(losses).text();
           const weightClassValue = $(weightClass).text();
           const fighterImageValue = $(fighterImage).attr("src");
-
+          const heightValue = $(fighterHeight).text();
+          const kotkoWinsValue = $(fighterKoTkoWins).text();
+          const figtherSubmissionWinsVaule = $(figtherSubmissionWins).text();
+          const figtherDecisonsWinsVaule = $(figtherDecisonsWins).text();
           //push data found to global array
           data.push({
             name: fullnameValue,
@@ -158,12 +173,19 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
             losses: lossesValue.replace("Losses", ""),
             weightClass: weightClassValue,
             image: "https://www.sherdog.com" + fighterImageValue,
+            height: heightValue,
+            winsBy: [
+              {
+                kotko: kotkoWinsValue,
+                submissions: figtherSubmissionWinsVaule,
+                decisions: figtherDecisonsWinsVaule,
+              },
+            ],
           });
 
           console.log("Profile scraped successfully!");
 
           let jsonObject = JSON.stringify(data[0]);
-          console.log("Checking json object in step 2", jsonObject);
 
           if (!fs.existsSync("FighterProfiles.json")) {
             jsonObject = JSON.stringify(data);
@@ -174,29 +196,24 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
             let check = fs.readFileSync("FighterProfiles.json");
             let checkJson = JSON.parse(check);
 
-            console.log(checkJson.length);
+            //checking for duplicates
             for (let x = 0; x < checkJson.length; x++) {
-              let checkName = checkJson[x].name;
-              let checkNickname = checkJson[x].nickname;
-              let checkCountry = checkJson[x].country;
-              let checkFightingOutOf = checkJson[x].fightingOutOf;
-              let checkFlag = checkJson[x].flag;
-              let checkWins = checkJson[x].wins;
-              let checkLosses = checkJson[x].losses;
-              let checkWeightClass = checkJson[x].weightClass;
-              let checkFighterImage = checkJson[x].image;
-
               if (
-                checkName == fullnameValue &&
-                checkNickname == nickNameValue &&
-                checkCountry == birthCountryValue &&
-                checkFightingOutOf == fightingOutOfValue &&
-                checkFlag == "https://www.sherdog.com" + flagValue &&
-                checkWins == winsValue.replace("Wins", "") &&
-                checkLosses == lossesValue.replace("Losses", "") &&
-                checkWeightClass == weightClassValue &&
-                checkFighterImage ==
-                  "https://www.sherdog.com" + fighterImageValue
+                checkJson[x].name == fullnameValue &&
+                checkJson[x].nickname == nickNameValue &&
+                checkJson[x].country == birthCountryValue &&
+                checkJson[x].fightingOutOf == fightingOutOfValue &&
+                checkJson[x].flag == "https://www.sherdog.com" + flagValue &&
+                checkJson[x].wins == winsValue.replace("Wins", "") &&
+                checkJson[x].losses == lossesValue.replace("Losses", "") &&
+                checkJson[x].weightClass == weightClassValue &&
+                checkJson[x].image ==
+                  "https://www.sherdog.com" + fighterImageValue &&
+                checkJson[x].height == heightValue &&
+                checkJson[x].winsBy[0].kotko == kotkoWinsValue &&
+                checkJson[x].winsBy[0].submissions ==
+                  figtherSubmissionWinsVaule &&
+                checkJson[x].winsBy[0].decisions == figtherDecisonsWinsVaule
               ) {
                 console.log("Fighter already exists in file");
                 data = []; //empty the global data array
@@ -215,7 +232,10 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
                 checkJson[x].weightClass = weightClassValue;
                 checkJson[x].image =
                   "https://www.sherdog.com" + fighterImageValue;
-                console.log(checkJson[x].image);
+                checkJson[x].height = heightValue;
+                checkJson[x].winsBy[0].kotko = kotkoWinsValue;
+                checkJson[x].winsBy[0].submissions = figtherSubmissionWinsVaule;
+                checkJson[x].winsBy[0].decisions = figtherDecisonsWinsVaule;
                 console.log("Fighter profile updated for: ", fullnameValue);
                 updateRecord = true;
               }
