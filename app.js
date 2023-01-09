@@ -147,6 +147,7 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
           const figtherDecisonsWins = $(
             "body > div.wrapper > div.inner-wrapper > div.col-left > div > section:nth-child(3) > div > div.fighter-info > div.fighter-right > div.fighter-data > div.winsloses-holder > div.wins > div:nth-child(7) > div.pl"
           );
+          let opponentTable = $("html.light .new_table tr:not(.table_head) td");
 
           //scrape the data
           const fullnameValue = $(fullName).text();
@@ -162,6 +163,19 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
           const kotkoWinsValue = $(fighterKoTkoWins).text();
           const figtherSubmissionWinsVaule = $(figtherSubmissionWins).text();
           const figtherDecisonsWinsVaule = $(figtherDecisonsWins).text();
+
+          //opponents faced data
+          let opponentData = [];
+          $(opponentTable).each((y) => {
+            opponentData.push({
+              name: opponentTable[y].children[0].name,
+            });
+          });
+
+          for (let i = 0; i < opponentData.length; i++) {
+            console.log(opponentData[i]);
+          }
+
           //push data found to global array
           data.push({
             name: fullnameValue,
