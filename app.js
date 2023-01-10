@@ -172,9 +172,7 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
             });
           });
 
-          console.log(opponentData[0]);
-
-          for (let i = 0; i < opponentData.length; i++) {
+          for (let i = 0; i < opponentData.length; i += 4) {
             console.log(opponentData[i]);
           }
 
