@@ -165,15 +165,25 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
           const figtherDecisonsWinsVaule = $(figtherDecisonsWins).text();
 
           //opponents faced data
-          let opponentData = [];
+          let beforeFilterOpponentArray = [];
           $(opponentTable).each((y) => {
-            opponentData.push({
+            beforeFilterOpponentArray.push({
               name: opponentTable[y].children[0].data,
+              event: opponentTable[y].children[0],
             });
           });
+          //
+          let opponentDataFiltered = [];
+          let increment = 0;
+          for (let i = 0; i < beforeFilterOpponentArray.length; i += 4) {
+            console.log(
+              beforeFilterOpponentArray[1].event.children[0].data,
+              "1"
+            );
 
-          for (let i = 0; i < opponentData.length; i += 4) {
-            console.log(opponentData[i]);
+            opponentDataFiltered.push({
+              name: opponentDataFiltered[increment++],
+            });
           }
 
           //push data found to global array
@@ -195,6 +205,7 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
                 decisions: figtherDecisonsWinsVaule,
               },
             ],
+            fights: [{}],
           });
 
           console.log("Profile scraped successfully!");
