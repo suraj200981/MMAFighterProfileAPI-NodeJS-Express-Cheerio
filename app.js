@@ -175,6 +175,7 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
           //
           let opponentDataFiltered = [];
           let increment = 0;
+
           for (let i = 0; i < beforeFilterOpponentArray.length; i += 4) {
             console.log(
               beforeFilterOpponentArray[1].event.children[0].data,
@@ -182,7 +183,9 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
             );
 
             opponentDataFiltered.push({
-              name: opponentDataFiltered[increment++],
+              name: beforeFilterOpponentArray[i],
+              event: beforeFilterOpponentArray[1 + i].event.children[0].data,
+              date: beforeFilterOpponentArray[i],
             });
           }
 
