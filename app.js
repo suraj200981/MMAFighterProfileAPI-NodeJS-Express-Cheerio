@@ -170,22 +170,18 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
             beforeFilterOpponentArray.push({
               name: opponentTable[y].children[0].data,
               event: opponentTable[y].children[0],
+              eventDate: opponentTable[y],
             });
           });
-          //
+
           let opponentDataFiltered = [];
-          let increment = 0;
 
           for (let i = 0; i < beforeFilterOpponentArray.length; i += 4) {
-            console.log(
-              beforeFilterOpponentArray[1].event.children[0].data,
-              "1"
-            );
-
             opponentDataFiltered.push({
-              name: beforeFilterOpponentArray[i],
+              name: beforeFilterOpponentArray[i].name,
               event: beforeFilterOpponentArray[1 + i].event.children[0].data,
-              date: beforeFilterOpponentArray[i],
+              date: beforeFilterOpponentArray[1 + i].event.parent.parent
+                .children[2].children[0].data,
             });
           }
 
@@ -220,7 +216,7 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
             fs.writeFileSync("FighterProfiles.json", jsonObject);
           } else {
             //check if same fighter already exists in file
-            //[][]
+
             let check = fs.readFileSync("FighterProfiles.json");
             let checkJson = JSON.parse(check);
 
