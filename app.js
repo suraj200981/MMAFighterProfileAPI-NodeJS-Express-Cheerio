@@ -147,7 +147,6 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
           const figtherDecisonsWins = $(
             "body > div.wrapper > div.inner-wrapper > div.col-left > div > section:nth-child(3) > div > div.fighter-info > div.fighter-right > div.fighter-data > div.winsloses-holder > div.wins > div:nth-child(7) > div.pl"
           );
-          let opponentTableEven = $(".new_table td");
 
           //scrape the data
           const fullnameValue = $(fullName).text();
@@ -164,65 +163,55 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
           const figtherSubmissionWinsVaule = $(figtherSubmissionWins).text();
           const figtherDecisonsWinsVaule = $(figtherDecisonsWins).text();
 
-          //opponents faced data
-          let beforeFilterOpponentArray = [];
-          $(opponentTableEven).each((y) => {
-            beforeFilterOpponentArray.push({
-              name: opponentTableEven[y].children[0],
-              event: opponentTableEven[y].children[0],
-              eventDate: opponentTableEven[y],
-            });
-          });
-
           let opponentDataFiltered = [];
 
-          for (let i = 0; i < beforeFilterOpponentArray.length; i++) {
-                 if (
-              beforeFilterOpponentArray[i].name == undefined
-              // beforeFilterOpponentArray[1 + i].event.parent.parent.children[2]
-              //   .children[0].data == undefined
-            ) {
-              if (
-                beforeFilterOpponentArray[i].event.children[0].data != undefined
-                // beforeFilterOpponentArray[1 + i].event.parent.parent.children[2]
-                //   .children[0].data == undefined
-              ) {
-                opponentDataFiltered.push({
-                  // name: beforeFilterOpponentArray[i].name,
-                  event: beforeFilterOpponentArray[i].event.children[0].data,
-                  // date: beforeFilterOpponentArray[1 + i].event.parent.parent
-                  //   .children[2].children[0].data,
-                });
-              } 
-          }
-          //   if (
-          //     beforeFilterOpponentArray[i].name == undefined
-          //     // beforeFilterOpponentArray[1 + i].event.parent.parent.children[2]
-          //     //   .children[0].data == undefined
-          //   ) {
-          //     if (
-          //       beforeFilterOpponentArray[i].event.children[0].data != undefined
-          //       // beforeFilterOpponentArray[1 + i].event.parent.parent.children[2]
-          //       //   .children[0].data == undefined
-          //     ) {
-          //       opponentDataFiltered.push({
-          //         // name: beforeFilterOpponentArray[i].name,
-          //         event: beforeFilterOpponentArray[i].event.children[0].data,
-          //         // date: beforeFilterOpponentArray[1 + i].event.parent.parent
-          //         //   .children[2].children[0].data,
-          //       });
-          //     } else {
-          //       continue;
-          //     }
-          //   }
+          /////////////////////////////////////////////////////////////////
 
-          //   opponentDataFiltered.push({
-          //     name: beforeFilterOpponentArray[i].name,
-          //     // event: beforeFilterOpponentArray[1 + i].event.children[0].data,
-          //     // date: beforeFilterOpponentArray[1 + i].event.parent.parent
-          //     //   .children[2].children[0].data,
-          //   });
-          // }
+          // Select the elements that contain the information you need
+          const opponentNames = $(".new_table tr td:nth-child(2) a")
+            .map((i, el) => $(el).text())
+            .get();
+          const eventNames = $(
+            '.new_table tr td:nth-child(3) span[itemprop="award"]'
+          )
+            .map((i, el) => $(el).text())
+            .get();
+          const eventDates = $(".new_table tr td:nth-child(3) span.sub_line")
+            .map((i, el) => $(el).text())
+            .get();
+          const methodOfVictory = $(".new_table tr td.winby b")
+            .map((i, el) => $(el).text())
+            .get();
+          const winLossData = $(".new_table tr td:first-child span")
+            .map((i, el) => $(el).text())
+            .get();
+
+          console.log(winLossData);
+          console.log(opponentNames);
+          console.log(eventNames);
+          console.log(eventDates);
+          console.log(methodOfVictory);
+
+          const minLength = Math.min(
+            opponentNames.length,
+            eventNames.length,
+            eventDates.length,
+            methodOfVictory.length,
+            winLossData.length
+          );
+
+          for (let i = 0; i < minLength; i++) {
+            opponentDataFiltered.push({
+              outcome: winLossData[i],
+              opponent: opponentNames[i],
+              event: eventNames[i],
+              date: eventDates[i],
+              method: methodOfVictory[i],
+            });
+          }
+          console.log(opponentDataFiltered);
+
+          /////////////////////////////////////////////////////////////////
 
           //push data found to global array
           data.push({
