@@ -1,1 +1,151 @@
-[{"name":"Conor McGregor","nickname":"\"Notorious\"","country":"Ireland","fightingOutOf":"Dublin","flag":"https://www.sherdog.com/img/flags/big/ie.png","wins":"22","losses":"6","weightClass":"Lightweight","image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325093124_Conor_McGregor_ff.JPG","birthCountry":"Ireland","winsBy":[{"kotko":"19","submissions":"1","decisions":"2"}],"height":"5'8\""},{"name":"Daniel Cormier","nickname":"\"DC\"","country":"United States","fightingOutOf":"San Jose, California","flag":"https://www.sherdog.com/img/flags/big/us.png","wins":"22","losses":"3","winsBy":[{"kotko":"10","submissions":"5","decisions":"7"}],"weightClass":"Heavyweight","birthCountry":"United States","image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325094318_Daniel_Cormier_ff.JPG","height":"5'11\""},{"name":"Jon Jones","nickname":"\"Bones\"","country":"United States","fightingOutOf":"Rochester, New York","flag":"https://www.sherdog.com/img/flags/big/us.png","wins":"26","losses":"1","weightClass":"Light Heavyweight","birthCountry":"United States","winsBy":[{"kotko":"10","submissions":"6","decisions":"10"}],"image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331052526_Jon_Jones_ff.JPG","height":"6'4\""},{"name":"Kevin Lee","nickname":"\"The Motown Phenom\"","country":"United States","fightingOutOf":"Grand Rapids, Michigan","flag":"https://www.sherdog.com/img/flags/big/us.png","wins":"19","losses":"7","weightClass":"Welterweight","birthCountry":"United States","winsBy":[{"kotko":"3","submissions":"8","decisions":"8"}],"image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331075544_Kevin_Lee_ff.JPG","height":"5'9\""},{"name":"Khabib Nurmagomedov","nickname":"\"The Eagle\"","country":"Russia","fightingOutOf":"Makhachkala, Dagestan","flag":"https://www.sherdog.com/img/flags/big/ru.png","wins":"29","losses":"0","weightClass":"Lightweight","winsBy":[{"kotko":"8","submissions":"11","decisions":"10"}],"image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331075707_Khabib_Nurmagomedov_ff.JPG","birthCountry":"Russia","height":"5'10\""},{"name":"Alexander Volkanovski","nickname":"\"The Great\"","country":"Australia","fightingOutOf":"Windang, New South Wales","flag":"https://www.sherdog.com/img/flags/big/au.png","wins":"25","losses":"1","weightClass":"Featherweight","winsBy":[{}],"image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325081549_Alexander_Volkanovski_ff.JPG"},{"name":"Dillon Danis","nickname":"\"El Jefe\"","country":"United States","fightingOutOf":"New York, New York","flag":"https://www.sherdog.com/img/flags/big/us.png","wins":"2","losses":"0","weightClass":"Middleweight","image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20181007121336_dillon_danis.JPG","height":"6'0\"","winsBy":[{"kotko":"0","submissions":"2","decisions":"0"}],"birthCountry":"United States"}]
+[
+  {
+    "name": "Conor McGregor",
+    "nickname": "\"Notorious\"",
+    "country": "Ireland",
+    "fightingOutOf": "Dublin",
+    "flag": "https://www.sherdog.com/img/flags/big/ie.png",
+    "wins": "22",
+    "losses": "6",
+    "weightClass": "Lightweight",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325093124_Conor_McGregor_ff.JPG",
+    "birthCountry": "Ireland",
+    "winsBy": [{ "kotko": "19", "submissions": "1", "decisions": "2" }],
+    "height": "5'8\""
+  },
+  {
+    "name": "Daniel Cormier",
+    "nickname": "\"DC\"",
+    "country": "United States",
+    "fightingOutOf": "San Jose, California",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "22",
+    "losses": "3",
+    "winsBy": [{ "kotko": "10", "submissions": "5", "decisions": "7" }],
+    "weightClass": "Heavyweight",
+    "birthCountry": "United States",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325094318_Daniel_Cormier_ff.JPG",
+    "height": "5'11\""
+  },
+  {
+    "name": "Jon Jones",
+    "nickname": "\"Bones\"",
+    "country": "United States",
+    "fightingOutOf": "Rochester, New York",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "26",
+    "losses": "1",
+    "weightClass": "Light Heavyweight",
+    "birthCountry": "United States",
+    "winsBy": [{ "kotko": "10", "submissions": "6", "decisions": "10" }],
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331052526_Jon_Jones_ff.JPG",
+    "height": "6'4\""
+  },
+  {
+    "name": "Kevin Lee",
+    "nickname": "\"The Motown Phenom\"",
+    "country": "United States",
+    "fightingOutOf": "Grand Rapids, Michigan",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "19",
+    "losses": "7",
+    "weightClass": "Welterweight",
+    "birthCountry": "United States",
+    "winsBy": [{ "kotko": "3", "submissions": "8", "decisions": "8" }],
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331075544_Kevin_Lee_ff.JPG",
+    "height": "5'9\""
+  },
+  {
+    "name": "Khabib Nurmagomedov",
+    "nickname": "\"The Eagle\"",
+    "country": "Russia",
+    "fightingOutOf": "Makhachkala, Dagestan",
+    "flag": "https://www.sherdog.com/img/flags/big/ru.png",
+    "wins": "29",
+    "losses": "0",
+    "weightClass": "Lightweight",
+    "winsBy": [{ "kotko": "8", "submissions": "11", "decisions": "10" }],
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331075707_Khabib_Nurmagomedov_ff.JPG",
+    "birthCountry": "Russia",
+    "height": "5'10\""
+  },
+  {
+    "name": "Alexander Volkanovski",
+    "nickname": "\"The Great\"",
+    "country": "Australia",
+    "fightingOutOf": "Windang, New South Wales",
+    "flag": "https://www.sherdog.com/img/flags/big/au.png",
+    "wins": "25",
+    "losses": "1",
+    "weightClass": "Featherweight",
+    "winsBy": [{}],
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325081549_Alexander_Volkanovski_ff.JPG"
+  },
+  {
+    "name": "Dillon Danis",
+    "nickname": "\"El Jefe\"",
+    "country": "United States",
+    "fightingOutOf": "New York, New York",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "2",
+    "losses": "0",
+    "weightClass": "Middleweight",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20181007121336_dillon_danis.JPG",
+    "height": "6'0\"",
+    "winsBy": [{ "kotko": "0", "submissions": "2", "decisions": "0" }],
+    "birthCountry": "United States",
+    "fights": {}
+  },
+  {
+    "name": "Victoria Lee",
+    "nickname": "\"The Prodigy\"",
+    "country": "United States",
+    "fightingOutOf": "Oahu, Hawaii",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "3",
+    "losses": "0",
+    "weightClass": "Strawweight",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230107043826_Victoria_Lee.JPG",
+    "height": "",
+    "winsBy": [{ "kotko": "1", "submissions": "2", "decisions": "0" }],
+    "fights": {
+      "opponentDataFiltered": [
+        {
+          "outcome": "win",
+          "opponent": "Victoria Souza",
+          "event": "One Championship - Revolution",
+          "date": "Sep / 24 / 2021",
+          "method": "TKO (Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Luping Wang",
+          "event": "One Championship - Battleground",
+          "date": "Jul / 30 / 2021",
+          "method": "Submission (Triangle Armbar)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Sunisa Srisan",
+          "event": "One Championship - Fists of Fury",
+          "date": "Feb / 26 / 2021",
+          "method": "Submission (Rear-Naked Choke)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Ilaria Leto",
+          "event": "2019 IMMAF - WMMAA Youth MMA World Championships - Youth B & C 12-13, 14-15, Cage 3",
+          "date": "Aug / 04 / 2019",
+          "method": "Technical Submission (Rear-Naked Choke)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Alessandra Dardelli",
+          "event": "2019 IMMAF - WMMAA Youth MMA World Championships - Youth B & C 12-13, 14-15, Cage 3",
+          "date": "Aug / 04 / 2019",
+          "method": "Decision (Unanimous)"
+        }
+      ]
+    }
+  }
+]
