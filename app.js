@@ -288,8 +288,8 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
                 checkJson[x].winsBy[0].kotko = kotkoWinsValue;
                 checkJson[x].winsBy[0].submissions = figtherSubmissionWinsVaule;
                 checkJson[x].winsBy[0].decisions = figtherDecisonsWinsVaule;
-                console.log("Fighter profile updated for: ", fullnameValue);
-                updateRecord = true;
+                checkJson[x].winsBy[0].fights.opponentDataFiltered =
+                  updateRecord = true;
               }
             }
 
