@@ -171,9 +171,7 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
           const opponentNames = $(".new_table tr td:nth-child(2) a")
             .map((i, el) => $(el).text())
             .get();
-          const eventNames = $(
-            '.new_table tr td:nth-child(3) span[itemprop="award"]'
-          )
+          const eventNames = $(".new_table tr td:nth-child(3) a")
             .map((i, el) => $(el).text())
             .get();
           const eventDates = $(".new_table tr td:nth-child(3) span.sub_line")
@@ -186,12 +184,6 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
             .map((i, el) => $(el).text())
             .get();
 
-          console.log(winLossData);
-          console.log(opponentNames);
-          console.log(eventNames);
-          console.log(eventDates);
-          console.log(methodOfVictory);
-
           const minLength = Math.min(
             opponentNames.length,
             eventNames.length,
@@ -199,6 +191,9 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
             methodOfVictory.length,
             winLossData.length
           );
+
+          console.log(eventNames);
+          console.log(eventNames);
 
           for (let i = 0; i < minLength; i++) {
             opponentDataFiltered.push({
@@ -265,7 +260,8 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
                 checkJson[x].winsBy[0].kotko == kotkoWinsValue &&
                 checkJson[x].winsBy[0].submissions ==
                   figtherSubmissionWinsVaule &&
-                checkJson[x].winsBy[0].decisions == figtherDecisonsWinsVaule
+                checkJson[x].winsBy[0].decisions == figtherDecisonsWinsVaule &&
+                checkJson[x].fights == opponentDataFiltered
               ) {
                 console.log("Fighter already exists in file");
                 data = []; //empty the global data array
@@ -288,8 +284,8 @@ function step2(enhancedProfileUrlFoundOnPage, res, req) {
                 checkJson[x].winsBy[0].kotko = kotkoWinsValue;
                 checkJson[x].winsBy[0].submissions = figtherSubmissionWinsVaule;
                 checkJson[x].winsBy[0].decisions = figtherDecisonsWinsVaule;
-                checkJson[x].winsBy[0].fights.opponentDataFiltered =
-                  updateRecord = true;
+                checkJson[x].fights = opponentDataFiltered;
+                updateRecord = true;
               }
             }
 
