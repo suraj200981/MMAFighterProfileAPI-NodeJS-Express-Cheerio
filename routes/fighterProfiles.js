@@ -5,6 +5,8 @@ const cheerio = require("cheerio");
 const randomUseragent = require("random-useragent");
 const fs = require("fs");
 
+const findFighter = require("../services/findFighter.js");
+
 let data = [];
 
 // this endpoint will scrape fighter profiles
@@ -24,7 +26,7 @@ router.get("/fighter", async (req, res) => {
   // define a function to scrape the fighter blocks from a single page
   function scrapePage(pageNumber) {
     let url = `https://www.sherdog.com/stats/fightfinder?association=&weightclass=&SearchTxt=${firstName}+${lastName}&page=${pageNumber}`;
-    return step1(url, req);
+    return findFighter.find(url, req);
   }
 
   // use a loop to repeatedly scrape the next page until the fighter name is found
@@ -64,33 +66,6 @@ router.get("/all_profiles", (req, res) => {
   let json = fs.readFileSync("FighterProfiles.json");
   return res.send(json);
 });
-
-function step1(initalUrlToScrape, req, res) {
-  return new Promise((resolve, reject) => {
-    request(
-      initalUrlToScrape,
-      { headers: { "User-Agent": req.headers["user-agent"] } },
-      (error, response, html) => {
-        if (!error && response.statusCode == 200) {
-          const $ = cheerio.load(html);
-          let fighterNameIndex = $(".new_table td a");
-          let figherBlocks = [];
-
-          $(fighterNameIndex).each((x) => {
-            figherBlocks.push({
-              href: fighterNameIndex[x].attribs.href,
-              name: fighterNameIndex[x].children[0].data,
-            });
-          });
-
-          resolve(figherBlocks);
-        } else {
-          reject(error);
-        }
-      }
-    );
-  });
-}
 
 function step2(enhancedProfileUrlFoundOnPage, res, req) {
   let updateRecord = false;
