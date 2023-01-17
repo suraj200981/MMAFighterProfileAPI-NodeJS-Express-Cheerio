@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const request = require("request");
-const cheerio = require("cheerio");
 const randomUseragent = require("random-useragent");
 const fs = require("fs");
 
