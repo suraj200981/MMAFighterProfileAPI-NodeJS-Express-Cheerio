@@ -18,7 +18,7 @@ router.get("/fighter", async (req, res) => {
   let firstName = req.query.firstName;
   let lastName = req.query.lastName;
 
-  console.log("query params: " + firstname + lastname);
+  console.log("query params: " + firstName + lastName);
 
   // initialize a variable to keep track of whether the fighter name has been found
   let fighterNameFound = false;
