@@ -8,6 +8,6 @@ const fighterAnalysis = require("./routes/fighterAnalysis");
 app.use("/api", fightersRouter);
 // app.use("/analysis", fighterAnalysis);
 
-app.listen(8080, () => {
-  console.log("MMA Fighter API started on http://localhost:8080/");
-});
+let port = process.env.PORT || 80;
+
+app.listen(port);
