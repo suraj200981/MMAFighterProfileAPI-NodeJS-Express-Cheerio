@@ -8,9 +8,7 @@ const fighterAnalysis = require("./routes/fighterAnalysis");
 app.use("/api", fightersRouter);
 // app.use("/analysis", fighterAnalysis);
 
-let port = process.env.PORT || 8080; // live env
-
-// let port = 8080; //localhost
+let port = process.env.PORT || 8080; // live and local env port
 
 app.listen(port, function (err) {
   if (err) console.log("Error in server setup");
