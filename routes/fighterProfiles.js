@@ -3,9 +3,14 @@ const router = express.Router();
 const randomUseragent = require("random-useragent");
 const fs = require("fs");
 
+//import services
 const findFighter = require("../services/findFighter.js");
-
 const scrapeRecord = require("../services/scrapeRecord.js");
+
+//jwt auth
+const jsonwebtoken = require("jsonwebtoken");
+const crypto = require("crypto");
+let jwtSecret = crypto.randomBytes(64).toString("hex");
 
 // this endpoint will scrape fighter profiles
 router.get("/fighter", async (req, res) => {
@@ -62,9 +67,24 @@ router.get("/fighter", async (req, res) => {
   })();
 });
 
+router.get("/token", (req, res) => {
+  return res.json({
+    bearer: jsonwebtoken.sign(Date.now().toString(), jwtSecret),
+  });
+});
+
 router.get("/all_profiles", (req, res) => {
-  let json = fs.readFileSync("FighterProfiles.json");
-  return res.send(json);
+  let token = req.headers.authorization;
+  // console.log(token);
+  try {
+    const decoded = jsonwebtoken.verify(token, jwtSecret);
+
+    // proceed with the endpoint logic
+    let json = fs.readFileSync("FighterProfiles.json");
+    return res.send(json);
+  } catch (err) {
+    return res.status(401).json({ message: "Invalid token" });
+  }
 });
 
 module.exports = router;
