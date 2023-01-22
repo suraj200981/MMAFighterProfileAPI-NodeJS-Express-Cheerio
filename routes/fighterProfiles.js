@@ -86,17 +86,8 @@ router.get("/token", (req, res) => {
 });
 
 router.get("/all_profiles", (req, res) => {
-  let token = req.headers.authorization;
-  // console.log(token);
-  try {
-    const decoded = jsonwebtoken.verify(token, jwtSecret);
-
-    // proceed with the endpoint logic
-    let json = fs.readFileSync("FighterProfiles.json");
-    return res.send(json);
-  } catch (err) {
-    return res.status(401).json({ message: "Invalid token" });
-  }
+  let json = fs.readFileSync("FighterProfiles.json");
+  return res.send(json);
 });
 
 module.exports = router;
