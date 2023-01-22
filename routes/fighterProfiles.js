@@ -85,6 +85,32 @@ router.get("/token", (req, res) => {
   });
 });
 
+router.get("/search", (req, res) => {
+  let fighterName = req.query.name;
+  let json = JSON.parse(fs.readFileSync("FighterProfiles.json"));
+  let fightersFound = [];
+  let count = 0;
+
+  for (let x = 0; x < json.length; x++) {
+    count = 0;
+    console.log(json[x].name);
+    for (let k = 0; k < fighterName.length; k++) {
+      if (
+        fighterName.toLowerCase().charAt(k) ==
+        json[x].name.toLowerCase().charAt(k)
+      ) {
+        count++;
+      }
+      if (count == fighterName.length) {
+        fightersFound.push(json[x]); //pushing found profile
+        count = 0;
+      }
+    }
+  }
+
+  return res.send(fightersFound);
+});
+
 router.get("/all_profiles", (req, res) => {
   let json = fs.readFileSync("FighterProfiles.json");
   return res.send(json);
