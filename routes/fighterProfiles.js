@@ -85,6 +85,7 @@ router.get("/token", (req, res) => {
   });
 });
 
+//search for specific fighter
 router.get("/search", (req, res) => {
   let fighterName = req.query.name;
   let json = JSON.parse(fs.readFileSync("FighterProfiles.json"));
@@ -105,6 +106,19 @@ router.get("/search", (req, res) => {
         fightersFound.push(json[x]); //pushing found profile
         count = 0;
       }
+    }
+  }
+
+  if (fightersFound.length === 0) {
+    try {
+      let response = await axios.get(`https://mma-fighter-profile-api-appdev.herokuapp.com/api/fighter?firstName=conor&lastName=mcgregor`, {
+        headers: {
+          authorization: req.headers.authorization,
+        },
+      });
+      fightersFound = response.data;
+    } catch (error) {
+      console.log(error);
     }
   }
 
