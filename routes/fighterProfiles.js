@@ -109,18 +109,18 @@ router.get("/search", (req, res) => {
     }
   }
 
-  if (fightersFound.length === 0) {
-    try {
-      let response = await axios.get(`https://mma-fighter-profile-api-appdev.herokuapp.com/api/fighter?firstName=conor&lastName=mcgregor`, {
-        headers: {
-          authorization: req.headers.authorization,
-        },
-      });
-      fightersFound = response.data;
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  // if (fightersFound.length === 0) {
+  //   try {
+  //     let response = await axios.get(`https://mma-fighter-profile-api-appdev.herokuapp.com/api/fighter?firstName=conor&lastName=mcgregor`, {
+  //       headers: {
+  //         authorization: req.headers.authorization,
+  //       },
+  //     });
+  //     fightersFound = response.data;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
   return res.send(fightersFound);
 });
