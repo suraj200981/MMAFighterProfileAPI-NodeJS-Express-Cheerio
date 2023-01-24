@@ -25,8 +25,8 @@ router.get("/fighter", async (req, res) => {
     // set req headers to random user agent
     req.headers["user-agent"] = userAgent;
 
-    let firstName = req.query.firstName;
-    let lastName = req.query.lastName;
+    let firstName = req.query.firstName.toLowerCase();
+    let lastName = req.query.lastName.toLowerCase();
 
     console.log("query params: " + firstName + lastName);
 
