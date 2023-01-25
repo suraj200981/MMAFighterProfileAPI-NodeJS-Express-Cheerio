@@ -43,11 +43,16 @@ router.get("/fighter", async (req, res) => {
     // use a loop to repeatedly scrape the next page until the fighter name is found
     (async function loop() {
       let pageNumber = 1; // define pageNumber here
+      let infinityLoopCount = 1;
       while (!fighterNameFound) {
         if (pageNumber == 30) {
           return res.status(400).json({ message: "Fighter not found" });
         }
         console.log(`Searching page ${pageNumber}...`);
+        infinityLoopCount++; // increment
+        if (infinityLoopCount > 10 && pageNumber == 1) {
+          return res.status(400).json({ message: "Fighter not found" });
+        }
         try {
           let figherBlocks = await scrapePage(pageNumber);
           for (let i = 0; i < figherBlocks.length; i++) {
@@ -61,9 +66,6 @@ router.get("/fighter", async (req, res) => {
                 "https://www.sherdog.com" + figherBlocks[i].href;
               console.log(`Found profile at ${enhancedProfileUrlFoundOnPage}`);
 
-              if (enhancedProfileUrlFoundOnPage === null) {
-                return res.status(400).json({ message: "Fighter not found" });
-              }
               // set the flag to exit the loop
               fighterNameFound = true;
               // scrape the fighter's full profile
