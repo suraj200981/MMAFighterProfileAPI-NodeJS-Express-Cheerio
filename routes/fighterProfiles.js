@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const randomUseragent = require("random-useragent");
 const fs = require("fs");
+const axios = require("axios");
 
 //import services
 const findFighter = require("../services/findFighter.js");
@@ -28,7 +29,7 @@ router.get("/fighter", async (req, res) => {
     let firstName = req.query.firstName.toLowerCase();
     let lastName = req.query.lastName.toLowerCase();
 
-    console.log("query params: " + firstName + lastName);
+    console.log("query params to scrape: " + firstName + lastName);
 
     // initialize a variable to keep track of whether the fighter name has been found
     let fighterNameFound = false;
@@ -86,11 +87,17 @@ router.get("/token", (req, res) => {
 });
 
 //search for specific fighter
-router.get("/search", (req, res) => {
-  let fighterName = req.query.name;
+router.get("/search", async (req, res) => {
+  let fighterName = req.query.name.toLowerCase();
   let json = JSON.parse(fs.readFileSync("FighterProfiles.json"));
   let fightersFound = [];
   let count = 0;
+
+  let myArray = fighterName.split(" ");
+
+  let firstName = myArray[0];
+  let lastName = myArray[1];
+  let bearer = "";
 
   for (let x = 0; x < json.length; x++) {
     count = 0;
@@ -109,20 +116,49 @@ router.get("/search", (req, res) => {
     }
   }
 
-  // if (fightersFound.length === 0) {
-  //   try {
-  //     let response = await axios.get(`https://mma-fighter-profile-api-appdev.herokuapp.com/api/fighter?firstName=conor&lastName=mcgregor`, {
-  //       headers: {
-  //         authorization: req.headers.authorization,
-  //       },
-  //     });
-  //     fightersFound = response.data;
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+  if (fightersFound.length === 0) {
+    if (myArray.length === 0) {
+      return res.status(400).json({ message: "Fighter name is required" });
+    }
+    try {
+      const reponseToken = await axios
+        .get("https://mma-fighter-profile-api-appdev.herokuapp.com/api/token")
+        .then((response) => {
+          bearer = response.data.bearer;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
 
-  return res.send(fightersFound);
+      const responseFigther = await axios.get(
+        `https://mma-fighter-profile-api-appdev.herokuapp.com/api/fighter?firstName=${firstName}&lastName=${lastName}`,
+        {
+          headers: {
+            authorization: bearer,
+          },
+        }
+      );
+
+      const finalResponseFighter = await axios
+        .get(
+          `https://mma-fighter-profile-api-appdev.herokuapp.com/api/search?name=${fighterName}`
+        )
+        .then((response) => {
+          console.log(response.data[0]);
+          fightersFound.push(response.data[0]);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      return res.send(fightersFound);
+    } catch (error) {
+      console.log(error);
+      return res.status(500).json({ message: "An error occured" });
+    }
+  } else {
+    return res.send(fightersFound);
+  }
 });
 
 router.get("/all_profiles", (req, res) => {
