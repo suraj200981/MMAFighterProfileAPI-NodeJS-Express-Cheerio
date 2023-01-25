@@ -60,6 +60,10 @@ router.get("/fighter", async (req, res) => {
               let enhancedProfileUrlFoundOnPage =
                 "https://www.sherdog.com" + figherBlocks[i].href;
               console.log(`Found profile at ${enhancedProfileUrlFoundOnPage}`);
+
+              if (enhancedProfileUrlFoundOnPage === null) {
+                return res.status(400).json({ message: "Fighter not found" });
+              }
               // set the flag to exit the loop
               fighterNameFound = true;
               // scrape the fighter's full profile
