@@ -102,6 +102,13 @@ router.get("/search", async (req, res) => {
   let lastName = myArray[1];
   let bearer = "";
 
+  if (firstName === undefined) {
+    firstName = "";
+  }
+  if (lastName === undefined) {
+    lastName = "";
+  }
+
   for (let x = 0; x < json.length; x++) {
     count = 0;
     console.log(json[x].name);
