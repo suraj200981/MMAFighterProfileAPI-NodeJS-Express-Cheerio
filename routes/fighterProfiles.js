@@ -44,6 +44,9 @@ router.get("/fighter", async (req, res) => {
     (async function loop() {
       let pageNumber = 1; // define pageNumber here
       while (!fighterNameFound) {
+        if (pageNumber == 30) {
+          return res.status(400).json({ message: "Fighter not found" });
+        }
         console.log(`Searching page ${pageNumber}...`);
         try {
           let figherBlocks = await scrapePage(pageNumber);
