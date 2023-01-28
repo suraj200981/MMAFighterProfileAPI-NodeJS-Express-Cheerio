@@ -103,6 +103,8 @@ router.get("/token", (req, res) => {
 router.get("/search", async (req, res) => {
   let fighterName = req.query.name.toLowerCase();
   let json;
+  //get fighter profiles from mongo db and json parse it
+  json = await findAllFighterProfiles(client);
 
   let fightersFound = [];
   let count = 0;
@@ -143,7 +145,7 @@ router.get("/search", async (req, res) => {
     }
     try {
       axios
-        .get("https://mma-fighter-profile-api-appdev.herokuapp.com/api/token")
+        .get(process.env.localHostGenerateToken)
         .then((response) => {
           bearer = response.data.bearer;
         })
@@ -152,7 +154,7 @@ router.get("/search", async (req, res) => {
         });
 
       axios.get(
-        `https://mma-fighter-profile-api-appdev.herokuapp.com/api/fighter?firstName=${firstName}&lastName=${lastName}`,
+        `${process.env.localHostScrapeFighter}=${firstName}&lastName=${lastName}`,
         {
           headers: {
             authorization: bearer,
@@ -161,9 +163,7 @@ router.get("/search", async (req, res) => {
       );
 
       axios
-        .get(
-          `https://mma-fighter-profile-api-appdev.herokuapp.com/api/search?name=${fighterName}`
-        )
+        .get(`${process.env.localHostSearchFighter}=${fighterName}`)
         .then((response) => {
           console.log(response.data[0]);
           fightersFound.push(response.data[0]);
@@ -195,11 +195,25 @@ router.get("/all_profiles", (req, res) => {
         console.log(err);
       } else {
         json = docs;
-        console.log(json);
         return res.send(json);
       }
     });
   });
 });
+
+async function findAllFighterProfiles(client) {
+  return new Promise((resolve, reject) => {
+    const db = client.db("FighterProfiles");
+    const collection = db.collection("FighterProfilesCollection");
+
+    collection.find({}).toArray((err, docs) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(docs);
+      }
+    });
+  });
+}
 
 module.exports = router;
