@@ -20,17 +20,20 @@ app.listen(port, function (err) {
 
 //connect to mongoDB
 const client = new MongoClient(process.env.URI_MONGO);
-try {
-  client.connect();
-
-  listDatabases(client);
-} catch (e) {
-  console.error(e);
-}
+client.connect((err) => {
+  if (err) {
+    console.error(err);
+  } else {
+    listDatabases(client);
+  }
+});
 
 async function listDatabases(client) {
-  databasesList = await client.db().admin().listDatabases();
-
-  console.log("Databases:");
-  databasesList.databases.forEach((db) => console.log(` - ${db.name}`));
+  try {
+    databasesList = await client.db().admin().listDatabases();
+    console.log("Databases:");
+    databasesList.databases.forEach((db) => console.log(` - ${db.name}`));
+  } catch (e) {
+    console.log(e);
+  }
 }
