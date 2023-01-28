@@ -30,29 +30,14 @@ client.connect((err) => {
   if (err) {
     console.error(err);
   } else {
-    listDatabases(client);
+    updateProfilesOnServerStart(client, fighterProfiles);
   }
 });
-updateProfilesOnServerStart(client, fighterProfiles);
 
-async function listDatabases(client) {
-  try {
-    databasesList = await client.db().admin().listDatabases();
-    console.log("Databases:");
-    databasesList.databases.forEach((db) => console.log(` - ${db.name}`));
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-//create function to update collection with json file on server start
-async function updateProfilesOnServerStart(client, fighterProfiles) {
-  try {
-    const db = client.db("FighterProfiles");
-    const collection = db.collection("FighterProfilesCollection");
-    const result = await collection.insertMany(JSON.parse(fighterProfiles));
-    console.log(result);
-  } catch (e) {
-    console.log(e);
-  }
+//function to delete and update collection with json file on server start
+function updateProfilesOnServerStart(client, fighterProfiles) {
+  const db = client.db("FighterProfiles");
+  const collection = db.collection("FighterProfilesCollection");
+  collection.deleteMany();
+  collection.insertMany(JSON.parse(fighterProfiles));
 }

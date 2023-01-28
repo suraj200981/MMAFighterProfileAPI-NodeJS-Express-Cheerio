@@ -3,7 +3,11 @@ const router = express.Router();
 const randomUseragent = require("random-useragent");
 const fs = require("fs");
 const axios = require("axios");
+require("dotenv").config();
 
+//passed mongo client to services
+const MongoClient = require("mongodb").MongoClient;
+const client = new MongoClient(process.env.URI_MONGO);
 //import services
 const findFighter = require("../services/findFighter.js");
 const scrapeRecord = require("../services/scrapeRecord.js");
@@ -98,7 +102,8 @@ router.get("/token", (req, res) => {
 //search for specific fighter
 router.get("/search", async (req, res) => {
   let fighterName = req.query.name.toLowerCase();
-  let json = JSON.parse(fs.readFileSync("FighterProfiles.json"));
+  let json;
+
   let fightersFound = [];
   let count = 0;
 
@@ -137,7 +142,7 @@ router.get("/search", async (req, res) => {
       return res.status(400).json({ message: "Fighter name is required" });
     }
     try {
-      const reponseToken = await axios
+      axios
         .get("https://mma-fighter-profile-api-appdev.herokuapp.com/api/token")
         .then((response) => {
           bearer = response.data.bearer;
@@ -146,7 +151,7 @@ router.get("/search", async (req, res) => {
           console.log(error);
         });
 
-      const responseFigther = await axios.get(
+      axios.get(
         `https://mma-fighter-profile-api-appdev.herokuapp.com/api/fighter?firstName=${firstName}&lastName=${lastName}`,
         {
           headers: {
@@ -155,7 +160,7 @@ router.get("/search", async (req, res) => {
         }
       );
 
-      const finalResponseFighter = await axios
+      axios
         .get(
           `https://mma-fighter-profile-api-appdev.herokuapp.com/api/search?name=${fighterName}`
         )
@@ -178,8 +183,23 @@ router.get("/search", async (req, res) => {
 });
 
 router.get("/all_profiles", (req, res) => {
-  let json = fs.readFileSync("FighterProfiles.json");
-  return res.send(json);
+  let json;
+
+  //get fighter profiles from mongo db and json parse it
+  client.connect((err) => {
+    const db = client.db("FighterProfiles");
+    const collection = db.collection("FighterProfilesCollection");
+
+    collection.find({}).toArray((err, docs) => {
+      if (err) {
+        console.log(err);
+      } else {
+        json = docs;
+        console.log(json);
+        return res.send(json);
+      }
+    });
+  });
 });
 
 module.exports = router;
