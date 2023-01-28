@@ -1,1 +1,1617 @@
-[{"name":"Conor McGregor","nickname":"\"Notorious\"","country":"Ireland","fightingOutOf":"Dublin","flag":"https://www.sherdog.com/img/flags/big/ie.png","wins":"22","losses":"6","weightClass":"Lightweight","image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325093124_Conor_McGregor_ff.JPG","birthCountry":"Ireland","winsBy":[{"kotko":"19","submissions":"1","decisions":"2"}],"height":"5'8\"","fights":[{"outcome":"loss","opponent":"Dustin Poirier","event":"UFC 264 - Poirier vs. McGregor 3","date":"Jul / 10 / 2021","method":"TKO (Leg Injury)"},{"outcome":"loss","opponent":"Dustin Poirier","event":"UFC 257 - Poirier vs. McGregor 2","date":"Jan / 23 / 2021","method":"KO (Punches)"},{"outcome":"win","opponent":"Donald Cerrone","event":"UFC 246 - McGregor vs. Cerrone","date":"Jan / 18 / 2020","method":"TKO (Head Kick and Punches)"},{"outcome":"loss","opponent":"Khabib Nurmagomedov","event":"UFC 229 - Nurmagomedov vs. McGregor","date":"Oct / 06 / 2018","method":"Submission (Neck Crank)"},{"outcome":"win","opponent":"Eddie Alvarez","event":"UFC 205 - Alvarez vs. McGregor","date":"Nov / 12 / 2016","method":"TKO (Punches)"},{"outcome":"win","opponent":"Nate Diaz","event":"UFC 202 - Diaz vs. McGregor 2","date":"Aug / 20 / 2016","method":"Decision (Majority)"},{"outcome":"loss","opponent":"Nate Diaz","event":"UFC 196 - McGregor vs. Diaz","date":"Mar / 05 / 2016","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Jose Aldo","event":"UFC 194 - Aldo vs. McGregor","date":"Dec / 12 / 2015","method":"KO (Punch)"},{"outcome":"win","opponent":"Chad Mendes","event":"UFC 189 - Mendes vs. McGregor","date":"Jul / 11 / 2015","method":"TKO (Punches)"},{"outcome":"win","opponent":"Dennis Siver","event":"UFC Fight Night 59 - McGregor vs. Siver","date":"Jan / 18 / 2015","method":"TKO (Punches)"},{"outcome":"win","opponent":"Dustin Poirier","event":"UFC 178 - Johnson vs. Cariaso","date":"Sep / 27 / 2014","method":"TKO (Punches)"},{"outcome":"win","opponent":"Diego Brandao","event":"UFC Fight Night 46 - McGregor vs. Brandao","date":"Jul / 19 / 2014","method":"TKO (Punches)"},{"outcome":"win","opponent":"Max Holloway","event":"UFC Fight Night 26 - Shogun vs. Sonnen","date":"Aug / 17 / 2013","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Marcus Brimage","event":"UFC on Fuel TV 9 - Mousasi vs. Latifi","date":"Apr / 06 / 2013","method":"TKO (Punches)"},{"outcome":"win","opponent":"Ivan Buchinger","event":"CWFC 51 - Cage Warriors Fighting Championship 51","date":"Dec / 31 / 2012","method":"KO (Punch)"},{"outcome":"win","opponent":"Dave Hill","event":"CWFC 47 - Cage Warriors Fighting Championship 47","date":"Jun / 02 / 2012","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Steve O'Keefe","event":"CWFC 45 - Cage Warriors Fighting Championship 45","date":"Feb / 18 / 2012","method":"KO (Elbows)"},{"outcome":"win","opponent":"Aaron Jahnsen","event":"CWFC - Fight Night 2","date":"Sep / 08 / 2011","method":"TKO (Punches)"},{"outcome":"win","opponent":"Artur Sowinski","event":"CG 2 - Clash of the Giants","date":"Jun / 11 / 2011","method":"TKO (Punches)"},{"outcome":"win","opponent":"Paddy Doherty","event":"IFC - Immortal Fighting Championship 4","date":"Apr / 16 / 2011","method":"KO (Punch)"},{"outcome":"win","opponent":"Mike Wood","event":"CC 8 - Fields vs. Redmond","date":"Mar / 12 / 2011","method":"KO (Punches)"},{"outcome":"win","opponent":"Hugh Brady","event":"CFC - Chaos Fighting Championships 8","date":"Feb / 12 / 2011","method":"TKO (Punches)"},{"outcome":"loss","opponent":"Joseph Duffy","event":"CWFC 39 - Cage Warriors 39: The Uprising","date":"Nov / 27 / 2010","method":"Submission (Arm-Triangle Choke)"},{"outcome":"win","opponent":"Connor Dillon","event":"CFC - Chaos Fighting Championships 7","date":"Oct / 09 / 2010","method":"TKO (Corner Stoppage)"},{"outcome":"win","opponent":"Stephen Bailey","event":"K.O. - The Fight Before Christmas 1","date":"Dec / 12 / 2008","method":"TKO (Punches)"},{"outcome":"loss","opponent":"Artemij Sitenkov","event":"COT 3 - Cage of Truth","date":"Jun / 28 / 2008","method":"Submission (Kneebar)"},{"outcome":"win","opponent":"Mo Taylor","event":"Cage Rage - Contenders: Ireland vs. Belgium","date":"May / 03 / 2008","method":"TKO (Punches)"},{"outcome":"win","opponent":"Gary Morris","event":"COT 2 - Cage of Truth","date":"Mar / 08 / 2008","method":"TKO (Punches)"},{"outcome":"loss","opponent":"Floyd Mayweather","event":"Showtime Boxing - Mayweather vs. McGregor","date":"Aug / 26 / 2017","method":"TKO (Punches)"},{"outcome":"win","opponent":"Ciaran Campbell","event":"ROT - Ring of Truth 6","date":"Feb / 17 / 2007","method":"TKO (Punches)"}]},{"name":"Daniel Cormier","nickname":"\"DC\"","country":"United States","fightingOutOf":"San Jose, California","flag":"https://www.sherdog.com/img/flags/big/us.png","wins":"22","losses":"3","winsBy":[{"kotko":"10","submissions":"5","decisions":"7"}],"weightClass":"Heavyweight","birthCountry":"United States","image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325094318_Daniel_Cormier_ff.JPG","height":"5'11\"","fights":[{"outcome":"loss","opponent":"Stipe Miocic","event":"UFC 252 - Miocic vs. Cormier 3","date":"Aug / 15 / 2020","method":"Decision (Unanimous)"},{"outcome":"loss","opponent":"Stipe Miocic","event":"UFC 241 - Cormier vs. Miocic 2","date":"Aug / 17 / 2019","method":"TKO (Punches)"},{"outcome":"win","opponent":"Derrick Lewis","event":"UFC 230 - Cormier vs. Lewis","date":"Nov / 03 / 2018","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Stipe Miocic","event":"UFC 226 - Miocic vs. Cormier","date":"Jul / 07 / 2018","method":"KO (Punches)"},{"outcome":"win","opponent":"Volkan Oezdemir","event":"UFC 220 - Miocic vs. Ngannou","date":"Jan / 20 / 2018","method":"TKO (Punches)"},{"outcome":"NC","opponent":"Jon Jones","event":"UFC 214 - Cormier vs. Jones 2","date":"Jul / 29 / 2017","method":"No Contest (Overturned by CSAC)"},{"outcome":"win","opponent":"Anthony Johnson","event":"UFC 210 - Cormier vs. Johnson 2","date":"Apr / 08 / 2017","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Anderson Silva","event":"UFC 200 - Tate vs. Nunes","date":"Jul / 09 / 2016","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Alexander Gustafsson","event":"UFC 192 - Cormier vs. Gustafsson","date":"Oct / 03 / 2015","method":"Decision (Split)"},{"outcome":"win","opponent":"Anthony Johnson","event":"UFC 187 - Johnson vs. Cormier","date":"May / 23 / 2015","method":"Submission (Rear-Naked Choke)"},{"outcome":"loss","opponent":"Jon Jones","event":"UFC 182 - Jones vs. Cormier","date":"Jan / 03 / 2015","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Dan Henderson","event":"UFC 173 - Barao vs. Dillashaw","date":"May / 24 / 2014","method":"Technical Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Patrick Cummins","event":"UFC 170 - Rousey vs. McMann","date":"Feb / 22 / 2014","method":"TKO (Punches)"},{"outcome":"win","opponent":"Roy Nelson","event":"UFC 166 - Velasquez vs. Dos Santos 3","date":"Oct / 19 / 2013","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Frank Mir","event":"UFC on Fox 7 - Henderson vs. Melendez","date":"Apr / 20 / 2013","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Dion Staring","event":"Strikeforce - Marquardt vs. Saffiedine","date":"Jan / 12 / 2013","method":"TKO (Punches)"},{"outcome":"win","opponent":"Josh Barnett","event":"Strikeforce - Barnett vs. Cormier","date":"May / 19 / 2012","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Antonio Silva","event":"Strikeforce - Barnett vs. Kharitonov","date":"Sep / 10 / 2011","method":"KO (Punches)"},{"outcome":"win","opponent":"Jeff Monson","event":"Strikeforce - Overeem vs. Werdum","date":"Jun / 18 / 2011","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Devin Cole","event":"Strikeforce - Challengers 13","date":"Jan / 07 / 2011","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Soa Palelei","event":"XMMA - Xtreme MMA 3","date":"Nov / 05 / 2010","method":"TKO (Submission to Punches)"},{"outcome":"win","opponent":"Jason Riley","event":"Strikeforce - Houston","date":"Aug / 21 / 2010","method":"TKO (Submission to Punches)"},{"outcome":"win","opponent":"Tony Johnson","event":"KOTC - Imminent Danger","date":"Aug / 13 / 2010","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Lucas Browne","event":"XMMA 2 - ANZ vs. USA","date":"Jul / 31 / 2010","method":"TKO (Punches)"},{"outcome":"win","opponent":"John Devine","event":"Strikeforce - Challengers 7","date":"Mar / 26 / 2010","method":"KO (Punch)"},{"outcome":"win","opponent":"Gary Frazier","event":"Strikeforce - Challengers 3","date":"Sep / 25 / 2009","method":"TKO (Punches)"}]},{"name":"Jon Jones","nickname":"\"Bones\"","country":"United States","fightingOutOf":"Rochester, New York","flag":"https://www.sherdog.com/img/flags/big/us.png","wins":"26","losses":"1","weightClass":"Light Heavyweight","birthCountry":"United States","winsBy":[{"kotko":"10","submissions":"6","decisions":"10"}],"image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331052526_Jon_Jones_ff.JPG","height":"6'4\"","fights":[{"outcome":"win","opponent":"Dominick Reyes","event":"UFC 247 - Jones vs. Reyes","date":"Feb / 08 / 2020","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Thiago Santos","event":"UFC 239 - Jones vs. Santos","date":"Jul / 06 / 2019","method":"Decision (Split)"},{"outcome":"win","opponent":"Anthony Smith","event":"UFC 235 - Jones vs. Smith","date":"Mar / 02 / 2019","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Alexander Gustafsson","event":"UFC 232 - Jones vs. Gustafsson 2","date":"Dec / 29 / 2018","method":"KO (Punches)"},{"outcome":"NC","opponent":"Daniel Cormier","event":"UFC 214 - Cormier vs. Jones 2","date":"Jul / 29 / 2017","method":"No Contest (Overturned by CSAC)"},{"outcome":"win","opponent":"Ovince St. Preux","event":"UFC 197 - Jones vs. St. Preux","date":"Apr / 23 / 2016","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Daniel Cormier","event":"UFC 182 - Jones vs. Cormier","date":"Jan / 03 / 2015","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Glover Teixeira","event":"UFC 172 - Jones vs. Teixeira","date":"Apr / 26 / 2014","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Alexander Gustafsson","event":"UFC 165 - Jones vs. Gustafsson","date":"Sep / 21 / 2013","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Chael Sonnen","event":"UFC 159 - Jones vs. Sonnen","date":"Apr / 27 / 2013","method":"TKO (Elbows and Punches)"},{"outcome":"win","opponent":"Vitor Belfort","event":"UFC 152 - Jones vs. Belfort","date":"Sep / 22 / 2012","method":"Submission (Keylock)"},{"outcome":"win","opponent":"Rashad Evans","event":"UFC 145 - Jones vs. Evans","date":"Apr / 21 / 2012","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Lyoto Machida","event":"UFC 140 - Jones vs. Machida","date":"Dec / 10 / 2011","method":"Technical Submission (Guillotine Choke)"},{"outcome":"win","opponent":"Quinton Jackson","event":"UFC 135 - Jones vs. Rampage","date":"Sep / 24 / 2011","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Mauricio Rua","event":"UFC 128 - Shogun vs. Jones","date":"Mar / 19 / 2011","method":"TKO (Punches and Knees)"},{"outcome":"win","opponent":"Ryan Bader","event":"UFC 126 - Silva vs. Belfort","date":"Feb / 05 / 2011","method":"Submission (Guillotine Choke)"},{"outcome":"win","opponent":"Vladimir Matyushenko","event":"UFC Live 2 - Jones vs. Matyushenko","date":"Aug / 01 / 2010","method":"TKO (Elbows)"},{"outcome":"win","opponent":"Brandon Vera","event":"UFC Live 1 - Vera vs. Jones","date":"Mar / 21 / 2010","method":"TKO (Elbows and Punches)"},{"outcome":"loss","opponent":"Matt Hamill","event":"UFC - The Ultimate Fighter 10 Finale","date":"Dec / 05 / 2009","method":"Disqualification (Illegal Elbows)"},{"outcome":"win","opponent":"Jake O'Brien","event":"UFC 100 - Lesnar vs. Mir 2","date":"Jul / 11 / 2009","method":"Submission (Guillotine Choke)"},{"outcome":"win","opponent":"Stephan Bonnar","event":"UFC 94 - St. Pierre vs. Penn 2","date":"Jan / 31 / 2009","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Andre Gusmao","event":"UFC 87 - Seek and Destroy","date":"Aug / 09 / 2008","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Moyses Gabin","event":"BCX 5 - Battle Cage Xtreme 5","date":"Jul / 12 / 2008","method":"TKO (Punches)"},{"outcome":"win","opponent":"Parker Porter","event":"WCF - World Championship Fighting 3","date":"Jun / 20 / 2008","method":"KO (Punch)"},{"outcome":"win","opponent":"Ryan Verrett","event":"USFL - War in the Woods 3","date":"May / 09 / 2008","method":"TKO (Punches)"},{"outcome":"win","opponent":"Anthony Pina","event":"ICE Fighter - ICE Fighter","date":"Apr / 25 / 2008","method":"Submission (Guillotine Choke)"},{"outcome":"win","opponent":"Carlos Eduardo","event":"BCX 4 - Battle Cage Xtreme 4","date":"Apr / 19 / 2008","method":"KO (Punches)"},{"outcome":"win","opponent":"Brad Bernard","event":"FFP - Untamed 20","date":"Apr / 12 / 2008","method":"TKO (Punches)"}]},{"name":"Kevin Lee","nickname":"\"The Motown Phenom\"","country":"United States","fightingOutOf":"Grand Rapids, Michigan","flag":"https://www.sherdog.com/img/flags/big/us.png","wins":"19","losses":"7","weightClass":"Welterweight","birthCountry":"United States","winsBy":[{"kotko":"3","submissions":"8","decisions":"8"}],"image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331075544_Kevin_Lee_ff.JPG","height":"5'9\"","fights":[]},{"name":"Khabib Nurmagomedov","nickname":"\"The Eagle\"","country":"Russia","fightingOutOf":"Makhachkala, Dagestan","flag":"https://www.sherdog.com/img/flags/big/ru.png","wins":"29","losses":"0","weightClass":"Lightweight","winsBy":[{"kotko":"8","submissions":"11","decisions":"10"}],"image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331075707_Khabib_Nurmagomedov_ff.JPG","birthCountry":"Russia","height":"5'10\"","fights":[{"outcome":"win","opponent":"Justin Gaethje","event":"UFC 254 - Nurmagomedov vs. Gaethje","date":"Oct / 24 / 2020","method":"Technical Submission (Triangle Choke)"},{"outcome":"win","opponent":"Dustin Poirier","event":"UFC 242 - Khabib vs. Poirier","date":"Sep / 07 / 2019","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Conor McGregor","event":"UFC 229 - Nurmagomedov vs. McGregor","date":"Oct / 06 / 2018","method":"Submission (Neck Crank)"},{"outcome":"win","opponent":"Al Iaquinta","event":"UFC 223 - Khabib vs. Iaquinta","date":"Apr / 07 / 2018","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Edson Barboza","event":"UFC 219 - Cyborg vs. Holm","date":"Dec / 30 / 2017","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Michael Johnson","event":"UFC 205 - Alvarez vs. McGregor","date":"Nov / 12 / 2016","method":"Submission (Kimura)"},{"outcome":"win","opponent":"Darrell Horcher","event":"UFC on Fox 19 - Teixeira vs. Evans","date":"Apr / 16 / 2016","method":"TKO (Punches)"},{"outcome":"win","opponent":"Rafael dos Anjos","event":"UFC on Fox 11 - Werdum vs. Browne","date":"Apr / 19 / 2014","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Pat Healy","event":"UFC 165 - Jones vs. Gustafsson","date":"Sep / 21 / 2013","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Abel Trujillo","event":"UFC 160 - Velasquez vs. Bigfoot 2","date":"May / 25 / 2013","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Thiago Tavares","event":"UFC on FX 7 - Belfort vs. Bisping","date":"Jan / 19 / 2013","method":"TKO (Punches and Elbows)"},{"outcome":"win","opponent":"Gleison Tibau","event":"UFC 148 - Silva vs. Sonnen 2","date":"Jul / 07 / 2012","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Kamal Shalorus","event":"UFC on FX 1 - Guillard vs. Miller","date":"Jan / 20 / 2012","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Arymarcel Santos","event":"ProFC - Battle in the Caucasus","date":"Oct / 22 / 2011","method":"TKO (Punches)"},{"outcome":"win","opponent":"Vadim Sandulskiy","event":"ProFC / GM Fight - Ukraine Cup 3","date":"Sep / 15 / 2011","method":"Submission (Triangle Choke)"},{"outcome":"win","opponent":"Hamiz Mamedov","event":"ProFC - Battle on Don","date":"Aug / 05 / 2011","method":"Submission (Triangle Choke)"},{"outcome":"win","opponent":"Kadzhik Abadzhyan","event":"ProFC - Union Nation Cup Final","date":"Jul / 02 / 2011","method":"Submission (Triangle Choke)"},{"outcome":"win","opponent":"Ashot Shahinyan","event":"ProFC - Union Nation Cup 15","date":"May / 06 / 2011","method":"KO (Punches)"},{"outcome":"win","opponent":"Said Khalilov","event":"ProFC - Union Nation Cup 14","date":"Apr / 09 / 2011","method":"Submission (Kimura)"},{"outcome":"win","opponent":"Alexander Agafonov","event":"M-1 Selection Ukraine 2010 - The Finals","date":"Feb / 12 / 2011","method":"TKO (Corner Stoppage)"},{"outcome":"win","opponent":"Vitaliy Ostrovskiy","event":"M-1 Selection Ukraine 2010 - Clash of the Titans","date":"Sep / 18 / 2010","method":"TKO (Punches)"},{"outcome":"win","opponent":"Ali Bagov","event":"GFP - Golden Fist Russia","date":"Jun / 10 / 2010","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Shahbulat Shamhalaev","event":"M-1 Challenge - 2009 Selections 9","date":"Nov / 03 / 2009","method":"Submission (Armbar)"},{"outcome":"win","opponent":"Eldar Eldarov","event":"TFC 3 - Tsumada Fighting Championship","date":"Aug / 08 / 2009","method":"TKO (Punches)"},{"outcome":"win","opponent":"Said Akhmed","event":"TFC 3 - Tsumada Fighting Championship","date":"Aug / 08 / 2009","method":"TKO (Punches)"},{"outcome":"win","opponent":"Shamil Abdulkerimov","event":"PAC - Pancration Atrium Cup 1","date":"Oct / 11 / 2008","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Ramazan Kurbanismailov","event":"PAC - Pancration Atrium Cup 1","date":"Oct / 11 / 2008","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Magomed Magomedov","event":"PAC - Pancration Atrium Cup 1","date":"Oct / 11 / 2008","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Vusal Bayramov","event":"CSFU - Champions League","date":"Sep / 13 / 2008","method":"Submission (Triangle Choke)"}]},{"name":"Alexander Volkanovski","nickname":"\"The Great\"","country":"Australia","fightingOutOf":"Windang, New South Wales","flag":"https://www.sherdog.com/img/flags/big/au.png","wins":"25","losses":"1","weightClass":"Featherweight","winsBy":[{"kotko":"12","submissions":"3","decisions":"10"}],"image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325081549_Alexander_Volkanovski_ff.JPG","fights":[{"outcome":"win","opponent":"Max Holloway","event":"UFC 276 - Adesanya vs. Cannonier","date":"Jul / 02 / 2022","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Chan Sung Jung","event":"UFC 273 - Volkanovski vs. Korean Zombie","date":"Apr / 09 / 2022","method":"TKO (Punches)"},{"outcome":"win","opponent":"Brian Ortega","event":"UFC 266 - Volkanovski vs. Ortega","date":"Sep / 25 / 2021","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Max Holloway","event":"UFC 251 - Usman vs. Masvidal","date":"Jul / 11 / 2020","method":"Decision (Split)"},{"outcome":"win","opponent":"Max Holloway","event":"UFC 245 - Usman vs. Covington","date":"Dec / 14 / 2019","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Jose Aldo","event":"UFC 237 - Namajunas vs. Andrade","date":"May / 11 / 2019","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Chad Mendes","event":"UFC 232 - Jones vs. Gustafsson 2","date":"Dec / 29 / 2018","method":"TKO (Punches)"},{"outcome":"win","opponent":"Darren Elkins","event":"UFC Fight Night 133 - Dos Santos vs. Ivanov","date":"Jul / 14 / 2018","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Jeremy Kennedy","event":"UFC 221 - Romero vs. Rockhold","date":"Feb / 10 / 2018","method":"TKO (Punches)"},{"outcome":"win","opponent":"Shane Young","event":"UFC Fight Night 121 - Werdum vs. Tybura","date":"Nov / 18 / 2017","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Mizuto Hirota","event":"UFC Fight Night 110 - Hunt vs. Lewis","date":"Jun / 10 / 2017","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Yusuke Kasuya","event":"UFC Fight Night 101 - Whittaker vs. Brunson","date":"Nov / 26 / 2016","method":"TKO (Punches)"},{"outcome":"win","opponent":"Jai Bradney","event":"WW - Wollongong Wars 4","date":"Jul / 08 / 2016","method":"TKO (Punches)"},{"outcome":"win","opponent":"Jamie Mullarkey","event":"AFC 15 - Wilkinson vs. Abdallah","date":"Mar / 19 / 2016","method":"KO (Punch)"},{"outcome":"win","opponent":"Yusuke Yachi","event":"PXC - Pacific Xtreme Combat 50","date":"Dec / 04 / 2015","method":"Submission (Triangle Choke)"},{"outcome":"win","opponent":"James Bishop","event":"AFC 13 - Australian Fighting Championship 13","date":"Jun / 14 / 2015","method":"TKO (Punches)"},{"outcome":"win","opponent":"David Butt","event":"WW - Wollongong Wars 2","date":"Nov / 01 / 2014","method":"TKO (Punches)"},{"outcome":"win","opponent":"Kyle Reyes","event":"PXC - Pacific Xtreme Combat 45","date":"Oct / 24 / 2014","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Jai Bradney","event":"Roshambo MMA 3 - In the Cage","date":"Jul / 26 / 2014","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Rodolfo Marques","event":"AFC 9 - Australian Fighting Championship 9","date":"May / 17 / 2014","method":"KO (Punch)"},{"outcome":"win","opponent":"Greg Atzori","event":"Roshambo MMA 2 - In the Cage","date":"Feb / 01 / 2014","method":"Submission (Guillotine Choke)"},{"outcome":"win","opponent":"Luke Catubig","event":"AFC 7 - Australian Fighting Championship 7","date":"Dec / 14 / 2013","method":"TKO (Punches)"},{"outcome":"loss","opponent":"Corey Nelson","event":"AFC 5 - Australian Fighting Championship 5","date":"May / 10 / 2013","method":"TKO (Head Kick and Punches)"},{"outcome":"win","opponent":"Anton Zafir","event":"Roshambo MMA 1 - In the Cage","date":"Apr / 06 / 2013","method":"TKO (Punches)"},{"outcome":"win","opponent":"Regan Wilson","event":"Southern Fight Promotions - Cage Conquest 2","date":"Feb / 23 / 2013","method":"TKO (Punches)"},{"outcome":"win","opponent":"Gerhard Voigt","event":"Revolution Promotions - Revolution at the Roxy","date":"May / 19 / 2012","method":"Decision (Unanimous)"}],"birthCountry":"Australia","height":"5'6\""},{"name":"Dillon Danis","nickname":"\"El Jefe\"","country":"United States","fightingOutOf":"New York, New York","flag":"https://www.sherdog.com/img/flags/big/us.png","wins":"2","losses":"0","weightClass":"Middleweight","image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20181007121336_dillon_danis.JPG","height":"6'0\"","winsBy":[{"kotko":"0","submissions":"2","decisions":"0"}],"birthCountry":"United States","fights":[{"outcome":"win","opponent":"Max Humphrey","event":"Bellator 222 - MacDonald vs. Gracie","date":"Jun / 14 / 2019","method":"Submission (Armbar)"},{"outcome":"win","opponent":"Kyle Walker","event":"Bellator 198 - Fedor vs. Mir","date":"Apr / 28 / 2018","method":"Submission (Toe Hold)"}]},{"name":"Victoria Lee","nickname":"\"The Prodigy\"","country":"United States","fightingOutOf":"Oahu, Hawaii","flag":"https://www.sherdog.com/img/flags/big/us.png","wins":"3","losses":"0","weightClass":"Strawweight","image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20230107043826_Victoria_Lee.JPG","height":"","winsBy":[{"kotko":"1","submissions":"2","decisions":"0"}],"fights":[{"outcome":"win","opponent":"Victoria Souza","event":"One Championship - Revolution","date":"Sep / 24 / 2021","method":"TKO (Punches)"},{"outcome":"win","opponent":"Luping Wang","event":"One Championship - Battleground","date":"Jul / 30 / 2021","method":"Submission (Triangle Armbar)"},{"outcome":"win","opponent":"Sunisa Srisan","event":"One Championship - Fists of Fury","date":"Feb / 26 / 2021","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Ilaria Leto","event":"2019 IMMAF - WMMAA Youth MMA World Championships - Youth B & C 12-13, 14-15, Cage 3","date":"Aug / 04 / 2019","method":"Technical Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Alessandra Dardelli","event":"2019 IMMAF - WMMAA Youth MMA World Championships - Youth B & C 12-13, 14-15, Cage 3","date":"Aug / 04 / 2019","method":"Decision (Unanimous)"}]},{"name":"Anthony Johnson","nickname":"\"Rumble\"","country":"United States","fightingOutOf":"Boca Raton, Florida","flag":"https://www.sherdog.com/img/flags/big/us.png","wins":"23","losses":"6","weightClass":"Light Heavyweight","image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20221113043930_Anthony_Johnson_ff.JPG","height":"","winsBy":[{"kotko":"17","submissions":"0","decisions":"6"}],"fights":[{"outcome":"win","opponent":"Jose Augusto Azevedo Barros","event":"Bellator 258 - Archuleta vs. Pettis","date":"May / 07 / 2021","method":"KO (Punch)"},{"outcome":"loss","opponent":"Daniel Cormier","event":"UFC 210 - Cormier vs. Johnson 2","date":"Apr / 08 / 2017","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Glover Teixeira","event":"UFC 202 - Diaz vs. McGregor 2","date":"Aug / 20 / 2016","method":"KO (Punch)"},{"outcome":"win","opponent":"Ryan Bader","event":"UFC on Fox 18 - Johnson vs. Bader","date":"Jan / 30 / 2016","method":"KO (Punches)"},{"outcome":"win","opponent":"Jimi Manuwa","event":"UFC 191 - Johnson vs. Dodson 2","date":"Sep / 05 / 2015","method":"KO (Punches)"},{"outcome":"loss","opponent":"Daniel Cormier","event":"UFC 187 - Johnson vs. Cormier","date":"May / 23 / 2015","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Alexander Gustafsson","event":"UFC on Fox 14 - Gustafsson vs. Johnson","date":"Jan / 24 / 2015","method":"TKO (Punches)"},{"outcome":"win","opponent":"Antonio Rogerio Nogueira","event":"UFC on Fox 12 - Lawler vs. Brown","date":"Jul / 26 / 2014","method":"KO (Punches)"},{"outcome":"win","opponent":"Phil Davis","event":"UFC 172 - Jones vs. Teixeira","date":"Apr / 26 / 2014","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Mike Kyle","event":"WSOF 8 - Gaethje vs. Patishnock","date":"Jan / 18 / 2014","method":"KO (Punches)"},{"outcome":"win","opponent":"Andrei Arlovski","event":"WSOF 2 - Arlovski vs. Johnson","date":"Mar / 23 / 2013","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"D.J. Linderman","event":"WSOF 1 - Arlovski vs. Cole","date":"Nov / 03 / 2012","method":"KO (Punch)"},{"outcome":"win","opponent":"Jake Rosholt","event":"XFL - Xtreme Fight Night 9","date":"Sep / 21 / 2012","method":"TKO (Head Kick)"},{"outcome":"win","opponent":"Esteves Jones","event":"Titan FC 24 -  Titan Fighting Championship 24","date":"Aug / 24 / 2012","method":"TKO (Punches)"},{"outcome":"win","opponent":"David Branch","event":"Titan FC 22 - Titan Fighting Championship 22","date":"May / 25 / 2012","method":"Decision (Unanimous)"},{"outcome":"loss","opponent":"Vitor Belfort","event":"UFC 142 - Aldo vs. Mendes","date":"Jan / 14 / 2012","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Charlie Brenneman","event":"UFC Live 6 - Cruz vs. Johnson","date":"Oct / 01 / 2011","method":"KO (Head Kick)"},{"outcome":"win","opponent":"Dan Hardy","event":"UFC Fight Night 24 - Nogueira vs. Davis","date":"Mar / 26 / 2011","method":"Decision (Unanimous)"},{"outcome":"loss","opponent":"Josh Koscheck","event":"UFC 106 - Ortiz vs. Griffin 2","date":"Nov / 21 / 2009","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Yoshiyuki Yoshida","event":"UFC 104 - Machida vs. Shogun","date":"Oct / 24 / 2009","method":"TKO (Punches)"},{"outcome":"win","opponent":"Luigi Fioravanti","event":"UFC Fight Night 17 - Lauzon vs. Stephens","date":"Feb / 07 / 2009","method":"TKO (Punches)"},{"outcome":"win","opponent":"Kevin Burns","event":"UFC - The Ultimate Fighter 8 Finale","date":"Dec / 13 / 2008","method":"KO (Head Kick)"},{"outcome":"loss","opponent":"Kevin Burns","event":"UFC Fight Night 14 - Silva vs. Irvin","date":"Jul / 19 / 2008","method":"TKO (Eye Injury)"},{"outcome":"win","opponent":"Tom Speer","event":"UFC Fight Night 13 - Florian vs. Lauzon","date":"Apr / 02 / 2008","method":"KO (Punches)"},{"outcome":"loss","opponent":"Rich Clementi","event":"UFC 76 - Knockout","date":"Sep / 22 / 2007","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Chad Reiner","event":"UFC Fight Night 10 - Stout vs. Fisher 2","date":"Jun / 12 / 2007","method":"KO (Punches)"},{"outcome":"win","opponent":"Keith Wilson","event":"Rocky Mountain Nationals - Demolition","date":"Sep / 16 / 2006","method":"Decision (Majority)"},{"outcome":"win","opponent":"Rich Moskowitz","event":"Rocky Mountain Nationals - Demolition","date":"Sep / 16 / 2006","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Jonathan Romero","event":"PF 2 - Live MMA","date":"Aug / 18 / 2006","method":"TKO (Punches)"}],"birthCountry":"United States"},{"name":"Jiri Prochazka","nickname":"\"Denisa\"","country":"Czech Republic","fightingOutOf":"Hosteradice","flag":"https://www.sherdog.com/img/flags/big/cz.png","wins":"29","losses":"3","weightClass":"Light Heavyweight","image":"https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331052001_Jiri_Prochazka_ff.JPG","height":"6'4\"","winsBy":[{"kotko":"25","submissions":"3","decisions":"1"}],"fights":{"opponentDataFiltered":[{"outcome":"win","opponent":"Glover Teixeira","event":"UFC 275 - Teixeira vs. Prochazka","date":"Jun / 12 / 2022","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Dominick Reyes","event":"UFC on ESPN 23 - Reyes vs. Prochazka","date":"May / 01 / 2021","method":"KO (Spinning Back Elbow)"},{"outcome":"win","opponent":"Volkan Oezdemir","event":"UFC 251 - Usman vs. Masvidal","date":"Jul / 11 / 2020","method":"KO (Punch)"},{"outcome":"win","opponent":"C.B. Dollaway","event":"Rizin FF - Rizin 20","date":"Dec / 31 / 2019","method":"KO (Punches)"},{"outcome":"win","opponent":"Fabio Maldonado","event":"Rizin FF - Rizin 19: Lightweight Grand Prix 1st Round","date":"Oct / 12 / 2019","method":"KO (Punches)"},{"outcome":"win","opponent":"Muhammed Lawal","event":"Rizin FF - Rizin 15","date":"Apr / 21 / 2019","method":"TKO (Punches)"},{"outcome":"win","opponent":"Brandon Halsey","event":"Rizin FF - Rizin 14","date":"Dec / 31 / 2018","method":"TKO (Submission to Punches)"},{"outcome":"win","opponent":"Jake Heun","event":"Rizin FF - Rizin 13","date":"Sep / 30 / 2018","method":"TKO (Punches)"},{"outcome":"win","opponent":"Bruno Cappelozza","event":"Rizin FF - Rizin 11","date":"Jul / 29 / 2018","method":"KO (Punches)"},{"outcome":"win","opponent":"Karl Albrektsson","event":"Rizin Fighting World Grand Prix 2017 - Bantamweight Tournament: 2nd Round","date":"Dec / 29 / 2017","method":"TKO (Punches)"},{"outcome":"win","opponent":"Wilian Roberto Alves","event":"Fusion FN 16 - Cage Fight","date":"Sep / 29 / 2017","method":"TKO (Punches)"},{"outcome":"win","opponent":"Mark Tanios","event":"Rizin 2 - Rizin Fighting World Grand Prix 2016: Opening Round","date":"Sep / 25 / 2016","method":"Decision (Unanimous)"},{"outcome":"win","opponent":"Kazuyuki Fujita","event":"Rizin 1 - Rizin Fighting Federation 1","date":"Apr / 17 / 2016","method":"KO (Punch)"},{"outcome":"loss","opponent":"Muhammed Lawal","event":"Rizin Fighting Federation - Iza no Mai","date":"Dec / 31 / 2015","method":"KO (Punch)"},{"outcome":"win","opponent":"Vadim Nemkov","event":"Rizin Fighting Federation - Iza no Mai","date":"Dec / 31 / 2015","method":"TKO (Retirement)"},{"outcome":"win","opponent":"Satoshi Ishii","event":"Rizin Fighting Federation - Saraba no Utake","date":"Dec / 29 / 2015","method":"KO (Head Kick and Knees)"},{"outcome":"win","opponent":"Evgeni Kondratov","event":"ProFC 59 - Battle of Kursk 3","date":"Nov / 21 / 2015","method":"KO (Punch)"},{"outcome":"win","opponent":"Michal Fijalka","event":"GCF 31 - Cage Fight 6","date":"May / 22 / 2015","method":"TKO (Corner Stoppage)"},{"outcome":"win","opponent":"Rokas Stambrauskas","event":"GCF Challenge - Back in the Fight 4","date":"Mar / 27 / 2015","method":"TKO (Corner Stoppage)"},{"outcome":"draw","opponent":"Mikhail Mokhnatkin","event":"Fight Nights - Battle of Moscow 18","date":"Dec / 20 / 2014","method":"Draw (Majority)"},{"outcome":"win","opponent":"Darko Stosic","event":"GCF Challenge - Cage Fight 5","date":"Nov / 14 / 2014","method":"TKO (Punches)"},{"outcome":"win","opponent":"Tomas Penz","event":"GCF 28 - Cage Fight 4","date":"Jun / 06 / 2014","method":"TKO (Flying Knee and Punches)"},{"outcome":"win","opponent":"Viktor Bogutzki","event":"GCF 27 - Road to the Cage","date":"Mar / 21 / 2014","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Martin Solc","event":"GCF 26 - Fight Night","date":"Dec / 07 / 2013","method":"KO (Flying Knee)"},{"outcome":"win","opponent":"Oliver Dohring","event":"RTC - Rock the Cage 4","date":"Oct / 12 / 2013","method":"TKO (Punches)"},{"outcome":"loss","opponent":"Abdul-Kerim Edilov","event":"Fight Nights - Battle of Moscow 12","date":"Jun / 20 / 2013","method":"Submission (Rear-Naked Choke)"},{"outcome":"win","opponent":"Radovan Estocin","event":"GCF 23 - MMA Cage Fight 2","date":"May / 10 / 2013","method":"KO (Flying Knee and Punches)"},{"outcome":"win","opponent":"Josef Zak","event":"GCF 19 - Back in the Fight 2","date":"Feb / 15 / 2013","method":"TKO (Punches)"},{"outcome":"loss","opponent":"Bojan Velickovic","event":"Supreme Fighting Championship 1 - Balkan Fighter Night","date":"Dec / 09 / 2012","method":"TKO (Punches)"},{"outcome":"win","opponent":"Denic Strahinja","event":"RFN - Ring Fight Brno","date":"Nov / 15 / 2012","method":"Submission (Triangle Choke)"},{"outcome":"win","opponent":"Martin Vanis","event":"GCF 17 - Big Cage Ostrava 2","date":"Oct / 20 / 2012","method":"TKO (Punches)"},{"outcome":"win","opponent":"Vladimir Eis","event":"GCF 15 - Justfight Challenger","date":"Aug / 24 / 2012","method":"KO (Knee)"},{"outcome":"win","opponent":"Stanislav Futera","event":"GCF 10 - Battle in the Cage","date":"Apr / 07 / 2012","method":"KO (Punch)"}]}}]
+[
+  {
+    "name": "Conor McGregor",
+    "nickname": "\"Notorious\"",
+    "country": "Ireland",
+    "fightingOutOf": "Dublin",
+    "flag": "https://www.sherdog.com/img/flags/big/ie.png",
+    "wins": "22",
+    "losses": "6",
+    "weightClass": "Lightweight",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325093124_Conor_McGregor_ff.JPG",
+    "birthCountry": "Ireland",
+    "winsBy": [{ "kotko": "19", "submissions": "1", "decisions": "2" }],
+    "height": "5'8\"",
+    "fights": [
+      {
+        "outcome": "loss",
+        "opponent": "Dustin Poirier",
+        "event": "UFC 264 - Poirier vs. McGregor 3",
+        "date": "Jul / 10 / 2021",
+        "method": "TKO (Leg Injury)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Dustin Poirier",
+        "event": "UFC 257 - Poirier vs. McGregor 2",
+        "date": "Jan / 23 / 2021",
+        "method": "KO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Donald Cerrone",
+        "event": "UFC 246 - McGregor vs. Cerrone",
+        "date": "Jan / 18 / 2020",
+        "method": "TKO (Head Kick and Punches)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Khabib Nurmagomedov",
+        "event": "UFC 229 - Nurmagomedov vs. McGregor",
+        "date": "Oct / 06 / 2018",
+        "method": "Submission (Neck Crank)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Eddie Alvarez",
+        "event": "UFC 205 - Alvarez vs. McGregor",
+        "date": "Nov / 12 / 2016",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Nate Diaz",
+        "event": "UFC 202 - Diaz vs. McGregor 2",
+        "date": "Aug / 20 / 2016",
+        "method": "Decision (Majority)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Nate Diaz",
+        "event": "UFC 196 - McGregor vs. Diaz",
+        "date": "Mar / 05 / 2016",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Jose Aldo",
+        "event": "UFC 194 - Aldo vs. McGregor",
+        "date": "Dec / 12 / 2015",
+        "method": "KO (Punch)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Chad Mendes",
+        "event": "UFC 189 - Mendes vs. McGregor",
+        "date": "Jul / 11 / 2015",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Dennis Siver",
+        "event": "UFC Fight Night 59 - McGregor vs. Siver",
+        "date": "Jan / 18 / 2015",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Dustin Poirier",
+        "event": "UFC 178 - Johnson vs. Cariaso",
+        "date": "Sep / 27 / 2014",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Diego Brandao",
+        "event": "UFC Fight Night 46 - McGregor vs. Brandao",
+        "date": "Jul / 19 / 2014",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Max Holloway",
+        "event": "UFC Fight Night 26 - Shogun vs. Sonnen",
+        "date": "Aug / 17 / 2013",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Marcus Brimage",
+        "event": "UFC on Fuel TV 9 - Mousasi vs. Latifi",
+        "date": "Apr / 06 / 2013",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Ivan Buchinger",
+        "event": "CWFC 51 - Cage Warriors Fighting Championship 51",
+        "date": "Dec / 31 / 2012",
+        "method": "KO (Punch)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Dave Hill",
+        "event": "CWFC 47 - Cage Warriors Fighting Championship 47",
+        "date": "Jun / 02 / 2012",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Steve O'Keefe",
+        "event": "CWFC 45 - Cage Warriors Fighting Championship 45",
+        "date": "Feb / 18 / 2012",
+        "method": "KO (Elbows)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Aaron Jahnsen",
+        "event": "CWFC - Fight Night 2",
+        "date": "Sep / 08 / 2011",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Artur Sowinski",
+        "event": "CG 2 - Clash of the Giants",
+        "date": "Jun / 11 / 2011",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Paddy Doherty",
+        "event": "IFC - Immortal Fighting Championship 4",
+        "date": "Apr / 16 / 2011",
+        "method": "KO (Punch)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Mike Wood",
+        "event": "CC 8 - Fields vs. Redmond",
+        "date": "Mar / 12 / 2011",
+        "method": "KO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Hugh Brady",
+        "event": "CFC - Chaos Fighting Championships 8",
+        "date": "Feb / 12 / 2011",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Joseph Duffy",
+        "event": "CWFC 39 - Cage Warriors 39: The Uprising",
+        "date": "Nov / 27 / 2010",
+        "method": "Submission (Arm-Triangle Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Connor Dillon",
+        "event": "CFC - Chaos Fighting Championships 7",
+        "date": "Oct / 09 / 2010",
+        "method": "TKO (Corner Stoppage)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Stephen Bailey",
+        "event": "K.O. - The Fight Before Christmas 1",
+        "date": "Dec / 12 / 2008",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Artemij Sitenkov",
+        "event": "COT 3 - Cage of Truth",
+        "date": "Jun / 28 / 2008",
+        "method": "Submission (Kneebar)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Mo Taylor",
+        "event": "Cage Rage - Contenders: Ireland vs. Belgium",
+        "date": "May / 03 / 2008",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Gary Morris",
+        "event": "COT 2 - Cage of Truth",
+        "date": "Mar / 08 / 2008",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Floyd Mayweather",
+        "event": "Showtime Boxing - Mayweather vs. McGregor",
+        "date": "Aug / 26 / 2017",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Ciaran Campbell",
+        "event": "ROT - Ring of Truth 6",
+        "date": "Feb / 17 / 2007",
+        "method": "TKO (Punches)"
+      }
+    ]
+  },
+  {
+    "name": "Daniel Cormier",
+    "nickname": "\"DC\"",
+    "country": "United States",
+    "fightingOutOf": "San Jose, California",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "22",
+    "losses": "3",
+    "winsBy": [{ "kotko": "10", "submissions": "5", "decisions": "7" }],
+    "weightClass": "Heavyweight",
+    "birthCountry": "United States",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325094318_Daniel_Cormier_ff.JPG",
+    "height": "5'11\"",
+    "fights": [
+      {
+        "outcome": "loss",
+        "opponent": "Stipe Miocic",
+        "event": "UFC 252 - Miocic vs. Cormier 3",
+        "date": "Aug / 15 / 2020",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Stipe Miocic",
+        "event": "UFC 241 - Cormier vs. Miocic 2",
+        "date": "Aug / 17 / 2019",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Derrick Lewis",
+        "event": "UFC 230 - Cormier vs. Lewis",
+        "date": "Nov / 03 / 2018",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Stipe Miocic",
+        "event": "UFC 226 - Miocic vs. Cormier",
+        "date": "Jul / 07 / 2018",
+        "method": "KO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Volkan Oezdemir",
+        "event": "UFC 220 - Miocic vs. Ngannou",
+        "date": "Jan / 20 / 2018",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "NC",
+        "opponent": "Jon Jones",
+        "event": "UFC 214 - Cormier vs. Jones 2",
+        "date": "Jul / 29 / 2017",
+        "method": "No Contest (Overturned by CSAC)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Anthony Johnson",
+        "event": "UFC 210 - Cormier vs. Johnson 2",
+        "date": "Apr / 08 / 2017",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Anderson Silva",
+        "event": "UFC 200 - Tate vs. Nunes",
+        "date": "Jul / 09 / 2016",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Alexander Gustafsson",
+        "event": "UFC 192 - Cormier vs. Gustafsson",
+        "date": "Oct / 03 / 2015",
+        "method": "Decision (Split)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Anthony Johnson",
+        "event": "UFC 187 - Johnson vs. Cormier",
+        "date": "May / 23 / 2015",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Jon Jones",
+        "event": "UFC 182 - Jones vs. Cormier",
+        "date": "Jan / 03 / 2015",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Dan Henderson",
+        "event": "UFC 173 - Barao vs. Dillashaw",
+        "date": "May / 24 / 2014",
+        "method": "Technical Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Patrick Cummins",
+        "event": "UFC 170 - Rousey vs. McMann",
+        "date": "Feb / 22 / 2014",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Roy Nelson",
+        "event": "UFC 166 - Velasquez vs. Dos Santos 3",
+        "date": "Oct / 19 / 2013",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Frank Mir",
+        "event": "UFC on Fox 7 - Henderson vs. Melendez",
+        "date": "Apr / 20 / 2013",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Dion Staring",
+        "event": "Strikeforce - Marquardt vs. Saffiedine",
+        "date": "Jan / 12 / 2013",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Josh Barnett",
+        "event": "Strikeforce - Barnett vs. Cormier",
+        "date": "May / 19 / 2012",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Antonio Silva",
+        "event": "Strikeforce - Barnett vs. Kharitonov",
+        "date": "Sep / 10 / 2011",
+        "method": "KO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Jeff Monson",
+        "event": "Strikeforce - Overeem vs. Werdum",
+        "date": "Jun / 18 / 2011",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Devin Cole",
+        "event": "Strikeforce - Challengers 13",
+        "date": "Jan / 07 / 2011",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Soa Palelei",
+        "event": "XMMA - Xtreme MMA 3",
+        "date": "Nov / 05 / 2010",
+        "method": "TKO (Submission to Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Jason Riley",
+        "event": "Strikeforce - Houston",
+        "date": "Aug / 21 / 2010",
+        "method": "TKO (Submission to Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Tony Johnson",
+        "event": "KOTC - Imminent Danger",
+        "date": "Aug / 13 / 2010",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Lucas Browne",
+        "event": "XMMA 2 - ANZ vs. USA",
+        "date": "Jul / 31 / 2010",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "John Devine",
+        "event": "Strikeforce - Challengers 7",
+        "date": "Mar / 26 / 2010",
+        "method": "KO (Punch)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Gary Frazier",
+        "event": "Strikeforce - Challengers 3",
+        "date": "Sep / 25 / 2009",
+        "method": "TKO (Punches)"
+      }
+    ]
+  },
+  {
+    "name": "Jon Jones",
+    "nickname": "\"Bones\"",
+    "country": "United States",
+    "fightingOutOf": "Rochester, New York",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "26",
+    "losses": "1",
+    "weightClass": "Light Heavyweight",
+    "birthCountry": "United States",
+    "winsBy": [{ "kotko": "10", "submissions": "6", "decisions": "10" }],
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331052526_Jon_Jones_ff.JPG",
+    "height": "6'4\"",
+    "fights": [
+      {
+        "outcome": "win",
+        "opponent": "Dominick Reyes",
+        "event": "UFC 247 - Jones vs. Reyes",
+        "date": "Feb / 08 / 2020",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Thiago Santos",
+        "event": "UFC 239 - Jones vs. Santos",
+        "date": "Jul / 06 / 2019",
+        "method": "Decision (Split)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Anthony Smith",
+        "event": "UFC 235 - Jones vs. Smith",
+        "date": "Mar / 02 / 2019",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Alexander Gustafsson",
+        "event": "UFC 232 - Jones vs. Gustafsson 2",
+        "date": "Dec / 29 / 2018",
+        "method": "KO (Punches)"
+      },
+      {
+        "outcome": "NC",
+        "opponent": "Daniel Cormier",
+        "event": "UFC 214 - Cormier vs. Jones 2",
+        "date": "Jul / 29 / 2017",
+        "method": "No Contest (Overturned by CSAC)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Ovince St. Preux",
+        "event": "UFC 197 - Jones vs. St. Preux",
+        "date": "Apr / 23 / 2016",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Daniel Cormier",
+        "event": "UFC 182 - Jones vs. Cormier",
+        "date": "Jan / 03 / 2015",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Glover Teixeira",
+        "event": "UFC 172 - Jones vs. Teixeira",
+        "date": "Apr / 26 / 2014",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Alexander Gustafsson",
+        "event": "UFC 165 - Jones vs. Gustafsson",
+        "date": "Sep / 21 / 2013",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Chael Sonnen",
+        "event": "UFC 159 - Jones vs. Sonnen",
+        "date": "Apr / 27 / 2013",
+        "method": "TKO (Elbows and Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Vitor Belfort",
+        "event": "UFC 152 - Jones vs. Belfort",
+        "date": "Sep / 22 / 2012",
+        "method": "Submission (Keylock)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Rashad Evans",
+        "event": "UFC 145 - Jones vs. Evans",
+        "date": "Apr / 21 / 2012",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Lyoto Machida",
+        "event": "UFC 140 - Jones vs. Machida",
+        "date": "Dec / 10 / 2011",
+        "method": "Technical Submission (Guillotine Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Quinton Jackson",
+        "event": "UFC 135 - Jones vs. Rampage",
+        "date": "Sep / 24 / 2011",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Mauricio Rua",
+        "event": "UFC 128 - Shogun vs. Jones",
+        "date": "Mar / 19 / 2011",
+        "method": "TKO (Punches and Knees)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Ryan Bader",
+        "event": "UFC 126 - Silva vs. Belfort",
+        "date": "Feb / 05 / 2011",
+        "method": "Submission (Guillotine Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Vladimir Matyushenko",
+        "event": "UFC Live 2 - Jones vs. Matyushenko",
+        "date": "Aug / 01 / 2010",
+        "method": "TKO (Elbows)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Brandon Vera",
+        "event": "UFC Live 1 - Vera vs. Jones",
+        "date": "Mar / 21 / 2010",
+        "method": "TKO (Elbows and Punches)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Matt Hamill",
+        "event": "UFC - The Ultimate Fighter 10 Finale",
+        "date": "Dec / 05 / 2009",
+        "method": "Disqualification (Illegal Elbows)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Jake O'Brien",
+        "event": "UFC 100 - Lesnar vs. Mir 2",
+        "date": "Jul / 11 / 2009",
+        "method": "Submission (Guillotine Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Stephan Bonnar",
+        "event": "UFC 94 - St. Pierre vs. Penn 2",
+        "date": "Jan / 31 / 2009",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Andre Gusmao",
+        "event": "UFC 87 - Seek and Destroy",
+        "date": "Aug / 09 / 2008",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Moyses Gabin",
+        "event": "BCX 5 - Battle Cage Xtreme 5",
+        "date": "Jul / 12 / 2008",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Parker Porter",
+        "event": "WCF - World Championship Fighting 3",
+        "date": "Jun / 20 / 2008",
+        "method": "KO (Punch)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Ryan Verrett",
+        "event": "USFL - War in the Woods 3",
+        "date": "May / 09 / 2008",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Anthony Pina",
+        "event": "ICE Fighter - ICE Fighter",
+        "date": "Apr / 25 / 2008",
+        "method": "Submission (Guillotine Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Carlos Eduardo",
+        "event": "BCX 4 - Battle Cage Xtreme 4",
+        "date": "Apr / 19 / 2008",
+        "method": "KO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Brad Bernard",
+        "event": "FFP - Untamed 20",
+        "date": "Apr / 12 / 2008",
+        "method": "TKO (Punches)"
+      }
+    ]
+  },
+  {
+    "name": "Kevin Lee",
+    "nickname": "\"The Motown Phenom\"",
+    "country": "United States",
+    "fightingOutOf": "Grand Rapids, Michigan",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "19",
+    "losses": "7",
+    "weightClass": "Welterweight",
+    "birthCountry": "United States",
+    "winsBy": [{ "kotko": "3", "submissions": "8", "decisions": "8" }],
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331075544_Kevin_Lee_ff.JPG",
+    "height": "5'9\"",
+    "fights": []
+  },
+  {
+    "name": "Khabib Nurmagomedov",
+    "nickname": "\"The Eagle\"",
+    "country": "Russia",
+    "fightingOutOf": "Makhachkala, Dagestan",
+    "flag": "https://www.sherdog.com/img/flags/big/ru.png",
+    "wins": "29",
+    "losses": "0",
+    "weightClass": "Lightweight",
+    "winsBy": [{ "kotko": "8", "submissions": "11", "decisions": "10" }],
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331075707_Khabib_Nurmagomedov_ff.JPG",
+    "birthCountry": "Russia",
+    "height": "5'10\"",
+    "fights": [
+      {
+        "outcome": "win",
+        "opponent": "Justin Gaethje",
+        "event": "UFC 254 - Nurmagomedov vs. Gaethje",
+        "date": "Oct / 24 / 2020",
+        "method": "Technical Submission (Triangle Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Dustin Poirier",
+        "event": "UFC 242 - Khabib vs. Poirier",
+        "date": "Sep / 07 / 2019",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Conor McGregor",
+        "event": "UFC 229 - Nurmagomedov vs. McGregor",
+        "date": "Oct / 06 / 2018",
+        "method": "Submission (Neck Crank)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Al Iaquinta",
+        "event": "UFC 223 - Khabib vs. Iaquinta",
+        "date": "Apr / 07 / 2018",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Edson Barboza",
+        "event": "UFC 219 - Cyborg vs. Holm",
+        "date": "Dec / 30 / 2017",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Michael Johnson",
+        "event": "UFC 205 - Alvarez vs. McGregor",
+        "date": "Nov / 12 / 2016",
+        "method": "Submission (Kimura)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Darrell Horcher",
+        "event": "UFC on Fox 19 - Teixeira vs. Evans",
+        "date": "Apr / 16 / 2016",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Rafael dos Anjos",
+        "event": "UFC on Fox 11 - Werdum vs. Browne",
+        "date": "Apr / 19 / 2014",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Pat Healy",
+        "event": "UFC 165 - Jones vs. Gustafsson",
+        "date": "Sep / 21 / 2013",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Abel Trujillo",
+        "event": "UFC 160 - Velasquez vs. Bigfoot 2",
+        "date": "May / 25 / 2013",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Thiago Tavares",
+        "event": "UFC on FX 7 - Belfort vs. Bisping",
+        "date": "Jan / 19 / 2013",
+        "method": "TKO (Punches and Elbows)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Gleison Tibau",
+        "event": "UFC 148 - Silva vs. Sonnen 2",
+        "date": "Jul / 07 / 2012",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Kamal Shalorus",
+        "event": "UFC on FX 1 - Guillard vs. Miller",
+        "date": "Jan / 20 / 2012",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Arymarcel Santos",
+        "event": "ProFC - Battle in the Caucasus",
+        "date": "Oct / 22 / 2011",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Vadim Sandulskiy",
+        "event": "ProFC / GM Fight - Ukraine Cup 3",
+        "date": "Sep / 15 / 2011",
+        "method": "Submission (Triangle Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Hamiz Mamedov",
+        "event": "ProFC - Battle on Don",
+        "date": "Aug / 05 / 2011",
+        "method": "Submission (Triangle Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Kadzhik Abadzhyan",
+        "event": "ProFC - Union Nation Cup Final",
+        "date": "Jul / 02 / 2011",
+        "method": "Submission (Triangle Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Ashot Shahinyan",
+        "event": "ProFC - Union Nation Cup 15",
+        "date": "May / 06 / 2011",
+        "method": "KO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Said Khalilov",
+        "event": "ProFC - Union Nation Cup 14",
+        "date": "Apr / 09 / 2011",
+        "method": "Submission (Kimura)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Alexander Agafonov",
+        "event": "M-1 Selection Ukraine 2010 - The Finals",
+        "date": "Feb / 12 / 2011",
+        "method": "TKO (Corner Stoppage)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Vitaliy Ostrovskiy",
+        "event": "M-1 Selection Ukraine 2010 - Clash of the Titans",
+        "date": "Sep / 18 / 2010",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Ali Bagov",
+        "event": "GFP - Golden Fist Russia",
+        "date": "Jun / 10 / 2010",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Shahbulat Shamhalaev",
+        "event": "M-1 Challenge - 2009 Selections 9",
+        "date": "Nov / 03 / 2009",
+        "method": "Submission (Armbar)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Eldar Eldarov",
+        "event": "TFC 3 - Tsumada Fighting Championship",
+        "date": "Aug / 08 / 2009",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Said Akhmed",
+        "event": "TFC 3 - Tsumada Fighting Championship",
+        "date": "Aug / 08 / 2009",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Shamil Abdulkerimov",
+        "event": "PAC - Pancration Atrium Cup 1",
+        "date": "Oct / 11 / 2008",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Ramazan Kurbanismailov",
+        "event": "PAC - Pancration Atrium Cup 1",
+        "date": "Oct / 11 / 2008",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Magomed Magomedov",
+        "event": "PAC - Pancration Atrium Cup 1",
+        "date": "Oct / 11 / 2008",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Vusal Bayramov",
+        "event": "CSFU - Champions League",
+        "date": "Sep / 13 / 2008",
+        "method": "Submission (Triangle Choke)"
+      }
+    ]
+  },
+  {
+    "name": "Alexander Volkanovski",
+    "nickname": "\"The Great\"",
+    "country": "Australia",
+    "fightingOutOf": "Windang, New South Wales",
+    "flag": "https://www.sherdog.com/img/flags/big/au.png",
+    "wins": "25",
+    "losses": "1",
+    "weightClass": "Featherweight",
+    "winsBy": [{ "kotko": "12", "submissions": "3", "decisions": "10" }],
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220325081549_Alexander_Volkanovski_ff.JPG",
+    "fights": [
+      {
+        "outcome": "win",
+        "opponent": "Max Holloway",
+        "event": "UFC 276 - Adesanya vs. Cannonier",
+        "date": "Jul / 02 / 2022",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Chan Sung Jung",
+        "event": "UFC 273 - Volkanovski vs. Korean Zombie",
+        "date": "Apr / 09 / 2022",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Brian Ortega",
+        "event": "UFC 266 - Volkanovski vs. Ortega",
+        "date": "Sep / 25 / 2021",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Max Holloway",
+        "event": "UFC 251 - Usman vs. Masvidal",
+        "date": "Jul / 11 / 2020",
+        "method": "Decision (Split)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Max Holloway",
+        "event": "UFC 245 - Usman vs. Covington",
+        "date": "Dec / 14 / 2019",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Jose Aldo",
+        "event": "UFC 237 - Namajunas vs. Andrade",
+        "date": "May / 11 / 2019",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Chad Mendes",
+        "event": "UFC 232 - Jones vs. Gustafsson 2",
+        "date": "Dec / 29 / 2018",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Darren Elkins",
+        "event": "UFC Fight Night 133 - Dos Santos vs. Ivanov",
+        "date": "Jul / 14 / 2018",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Jeremy Kennedy",
+        "event": "UFC 221 - Romero vs. Rockhold",
+        "date": "Feb / 10 / 2018",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Shane Young",
+        "event": "UFC Fight Night 121 - Werdum vs. Tybura",
+        "date": "Nov / 18 / 2017",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Mizuto Hirota",
+        "event": "UFC Fight Night 110 - Hunt vs. Lewis",
+        "date": "Jun / 10 / 2017",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Yusuke Kasuya",
+        "event": "UFC Fight Night 101 - Whittaker vs. Brunson",
+        "date": "Nov / 26 / 2016",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Jai Bradney",
+        "event": "WW - Wollongong Wars 4",
+        "date": "Jul / 08 / 2016",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Jamie Mullarkey",
+        "event": "AFC 15 - Wilkinson vs. Abdallah",
+        "date": "Mar / 19 / 2016",
+        "method": "KO (Punch)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Yusuke Yachi",
+        "event": "PXC - Pacific Xtreme Combat 50",
+        "date": "Dec / 04 / 2015",
+        "method": "Submission (Triangle Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "James Bishop",
+        "event": "AFC 13 - Australian Fighting Championship 13",
+        "date": "Jun / 14 / 2015",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "David Butt",
+        "event": "WW - Wollongong Wars 2",
+        "date": "Nov / 01 / 2014",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Kyle Reyes",
+        "event": "PXC - Pacific Xtreme Combat 45",
+        "date": "Oct / 24 / 2014",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Jai Bradney",
+        "event": "Roshambo MMA 3 - In the Cage",
+        "date": "Jul / 26 / 2014",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Rodolfo Marques",
+        "event": "AFC 9 - Australian Fighting Championship 9",
+        "date": "May / 17 / 2014",
+        "method": "KO (Punch)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Greg Atzori",
+        "event": "Roshambo MMA 2 - In the Cage",
+        "date": "Feb / 01 / 2014",
+        "method": "Submission (Guillotine Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Luke Catubig",
+        "event": "AFC 7 - Australian Fighting Championship 7",
+        "date": "Dec / 14 / 2013",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Corey Nelson",
+        "event": "AFC 5 - Australian Fighting Championship 5",
+        "date": "May / 10 / 2013",
+        "method": "TKO (Head Kick and Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Anton Zafir",
+        "event": "Roshambo MMA 1 - In the Cage",
+        "date": "Apr / 06 / 2013",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Regan Wilson",
+        "event": "Southern Fight Promotions - Cage Conquest 2",
+        "date": "Feb / 23 / 2013",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Gerhard Voigt",
+        "event": "Revolution Promotions - Revolution at the Roxy",
+        "date": "May / 19 / 2012",
+        "method": "Decision (Unanimous)"
+      }
+    ],
+    "birthCountry": "Australia",
+    "height": "5'6\""
+  },
+  {
+    "name": "Dillon Danis",
+    "nickname": "\"El Jefe\"",
+    "country": "United States",
+    "fightingOutOf": "New York, New York",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "2",
+    "losses": "0",
+    "weightClass": "Middleweight",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20181007121336_dillon_danis.JPG",
+    "height": "6'0\"",
+    "winsBy": [{ "kotko": "0", "submissions": "2", "decisions": "0" }],
+    "birthCountry": "United States",
+    "fights": [
+      {
+        "outcome": "win",
+        "opponent": "Max Humphrey",
+        "event": "Bellator 222 - MacDonald vs. Gracie",
+        "date": "Jun / 14 / 2019",
+        "method": "Submission (Armbar)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Kyle Walker",
+        "event": "Bellator 198 - Fedor vs. Mir",
+        "date": "Apr / 28 / 2018",
+        "method": "Submission (Toe Hold)"
+      }
+    ]
+  },
+  {
+    "name": "Victoria Lee",
+    "nickname": "\"The Prodigy\"",
+    "country": "United States",
+    "fightingOutOf": "Oahu, Hawaii",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "3",
+    "losses": "0",
+    "weightClass": "Strawweight",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20230107043826_Victoria_Lee.JPG",
+    "height": "",
+    "winsBy": [{ "kotko": "1", "submissions": "2", "decisions": "0" }],
+    "fights": [
+      {
+        "outcome": "win",
+        "opponent": "Victoria Souza",
+        "event": "One Championship - Revolution",
+        "date": "Sep / 24 / 2021",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Luping Wang",
+        "event": "One Championship - Battleground",
+        "date": "Jul / 30 / 2021",
+        "method": "Submission (Triangle Armbar)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Sunisa Srisan",
+        "event": "One Championship - Fists of Fury",
+        "date": "Feb / 26 / 2021",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Ilaria Leto",
+        "event": "2019 IMMAF - WMMAA Youth MMA World Championships - Youth B & C 12-13, 14-15, Cage 3",
+        "date": "Aug / 04 / 2019",
+        "method": "Technical Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Alessandra Dardelli",
+        "event": "2019 IMMAF - WMMAA Youth MMA World Championships - Youth B & C 12-13, 14-15, Cage 3",
+        "date": "Aug / 04 / 2019",
+        "method": "Decision (Unanimous)"
+      }
+    ]
+  },
+  {
+    "name": "Anthony Johnson",
+    "nickname": "\"Rumble\"",
+    "country": "United States",
+    "fightingOutOf": "Boca Raton, Florida",
+    "flag": "https://www.sherdog.com/img/flags/big/us.png",
+    "wins": "23",
+    "losses": "6",
+    "weightClass": "Light Heavyweight",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20221113043930_Anthony_Johnson_ff.JPG",
+    "height": "",
+    "winsBy": [{ "kotko": "17", "submissions": "0", "decisions": "6" }],
+    "fights": [
+      {
+        "outcome": "win",
+        "opponent": "Jose Augusto Azevedo Barros",
+        "event": "Bellator 258 - Archuleta vs. Pettis",
+        "date": "May / 07 / 2021",
+        "method": "KO (Punch)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Daniel Cormier",
+        "event": "UFC 210 - Cormier vs. Johnson 2",
+        "date": "Apr / 08 / 2017",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Glover Teixeira",
+        "event": "UFC 202 - Diaz vs. McGregor 2",
+        "date": "Aug / 20 / 2016",
+        "method": "KO (Punch)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Ryan Bader",
+        "event": "UFC on Fox 18 - Johnson vs. Bader",
+        "date": "Jan / 30 / 2016",
+        "method": "KO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Jimi Manuwa",
+        "event": "UFC 191 - Johnson vs. Dodson 2",
+        "date": "Sep / 05 / 2015",
+        "method": "KO (Punches)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Daniel Cormier",
+        "event": "UFC 187 - Johnson vs. Cormier",
+        "date": "May / 23 / 2015",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Alexander Gustafsson",
+        "event": "UFC on Fox 14 - Gustafsson vs. Johnson",
+        "date": "Jan / 24 / 2015",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Antonio Rogerio Nogueira",
+        "event": "UFC on Fox 12 - Lawler vs. Brown",
+        "date": "Jul / 26 / 2014",
+        "method": "KO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Phil Davis",
+        "event": "UFC 172 - Jones vs. Teixeira",
+        "date": "Apr / 26 / 2014",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Mike Kyle",
+        "event": "WSOF 8 - Gaethje vs. Patishnock",
+        "date": "Jan / 18 / 2014",
+        "method": "KO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Andrei Arlovski",
+        "event": "WSOF 2 - Arlovski vs. Johnson",
+        "date": "Mar / 23 / 2013",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "D.J. Linderman",
+        "event": "WSOF 1 - Arlovski vs. Cole",
+        "date": "Nov / 03 / 2012",
+        "method": "KO (Punch)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Jake Rosholt",
+        "event": "XFL - Xtreme Fight Night 9",
+        "date": "Sep / 21 / 2012",
+        "method": "TKO (Head Kick)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Esteves Jones",
+        "event": "Titan FC 24 -  Titan Fighting Championship 24",
+        "date": "Aug / 24 / 2012",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "David Branch",
+        "event": "Titan FC 22 - Titan Fighting Championship 22",
+        "date": "May / 25 / 2012",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Vitor Belfort",
+        "event": "UFC 142 - Aldo vs. Mendes",
+        "date": "Jan / 14 / 2012",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Charlie Brenneman",
+        "event": "UFC Live 6 - Cruz vs. Johnson",
+        "date": "Oct / 01 / 2011",
+        "method": "KO (Head Kick)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Dan Hardy",
+        "event": "UFC Fight Night 24 - Nogueira vs. Davis",
+        "date": "Mar / 26 / 2011",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Josh Koscheck",
+        "event": "UFC 106 - Ortiz vs. Griffin 2",
+        "date": "Nov / 21 / 2009",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Yoshiyuki Yoshida",
+        "event": "UFC 104 - Machida vs. Shogun",
+        "date": "Oct / 24 / 2009",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Luigi Fioravanti",
+        "event": "UFC Fight Night 17 - Lauzon vs. Stephens",
+        "date": "Feb / 07 / 2009",
+        "method": "TKO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Kevin Burns",
+        "event": "UFC - The Ultimate Fighter 8 Finale",
+        "date": "Dec / 13 / 2008",
+        "method": "KO (Head Kick)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Kevin Burns",
+        "event": "UFC Fight Night 14 - Silva vs. Irvin",
+        "date": "Jul / 19 / 2008",
+        "method": "TKO (Eye Injury)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Tom Speer",
+        "event": "UFC Fight Night 13 - Florian vs. Lauzon",
+        "date": "Apr / 02 / 2008",
+        "method": "KO (Punches)"
+      },
+      {
+        "outcome": "loss",
+        "opponent": "Rich Clementi",
+        "event": "UFC 76 - Knockout",
+        "date": "Sep / 22 / 2007",
+        "method": "Submission (Rear-Naked Choke)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Chad Reiner",
+        "event": "UFC Fight Night 10 - Stout vs. Fisher 2",
+        "date": "Jun / 12 / 2007",
+        "method": "KO (Punches)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Keith Wilson",
+        "event": "Rocky Mountain Nationals - Demolition",
+        "date": "Sep / 16 / 2006",
+        "method": "Decision (Majority)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Rich Moskowitz",
+        "event": "Rocky Mountain Nationals - Demolition",
+        "date": "Sep / 16 / 2006",
+        "method": "Decision (Unanimous)"
+      },
+      {
+        "outcome": "win",
+        "opponent": "Jonathan Romero",
+        "event": "PF 2 - Live MMA",
+        "date": "Aug / 18 / 2006",
+        "method": "TKO (Punches)"
+      }
+    ],
+    "birthCountry": "United States"
+  },
+  {
+    "name": "Jiri Prochazka",
+    "nickname": "\"Denisa\"",
+    "country": "Czech Republic",
+    "fightingOutOf": "Hosteradice",
+    "flag": "https://www.sherdog.com/img/flags/big/cz.png",
+    "wins": "29",
+    "losses": "3",
+    "weightClass": "Light Heavyweight",
+    "image": "https://www.sherdog.com/image_crop/200/300/_images/fighter/20220331052001_Jiri_Prochazka_ff.JPG",
+    "height": "6'4\"",
+    "winsBy": [{ "kotko": "25", "submissions": "3", "decisions": "1" }],
+    "fights": {
+      "opponentDataFiltered": [
+        {
+          "outcome": "win",
+          "opponent": "Glover Teixeira",
+          "event": "UFC 275 - Teixeira vs. Prochazka",
+          "date": "Jun / 12 / 2022",
+          "method": "Submission (Rear-Naked Choke)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Dominick Reyes",
+          "event": "UFC on ESPN 23 - Reyes vs. Prochazka",
+          "date": "May / 01 / 2021",
+          "method": "KO (Spinning Back Elbow)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Volkan Oezdemir",
+          "event": "UFC 251 - Usman vs. Masvidal",
+          "date": "Jul / 11 / 2020",
+          "method": "KO (Punch)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "C.B. Dollaway",
+          "event": "Rizin FF - Rizin 20",
+          "date": "Dec / 31 / 2019",
+          "method": "KO (Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Fabio Maldonado",
+          "event": "Rizin FF - Rizin 19: Lightweight Grand Prix 1st Round",
+          "date": "Oct / 12 / 2019",
+          "method": "KO (Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Muhammed Lawal",
+          "event": "Rizin FF - Rizin 15",
+          "date": "Apr / 21 / 2019",
+          "method": "TKO (Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Brandon Halsey",
+          "event": "Rizin FF - Rizin 14",
+          "date": "Dec / 31 / 2018",
+          "method": "TKO (Submission to Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Jake Heun",
+          "event": "Rizin FF - Rizin 13",
+          "date": "Sep / 30 / 2018",
+          "method": "TKO (Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Bruno Cappelozza",
+          "event": "Rizin FF - Rizin 11",
+          "date": "Jul / 29 / 2018",
+          "method": "KO (Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Karl Albrektsson",
+          "event": "Rizin Fighting World Grand Prix 2017 - Bantamweight Tournament: 2nd Round",
+          "date": "Dec / 29 / 2017",
+          "method": "TKO (Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Wilian Roberto Alves",
+          "event": "Fusion FN 16 - Cage Fight",
+          "date": "Sep / 29 / 2017",
+          "method": "TKO (Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Mark Tanios",
+          "event": "Rizin 2 - Rizin Fighting World Grand Prix 2016: Opening Round",
+          "date": "Sep / 25 / 2016",
+          "method": "Decision (Unanimous)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Kazuyuki Fujita",
+          "event": "Rizin 1 - Rizin Fighting Federation 1",
+          "date": "Apr / 17 / 2016",
+          "method": "KO (Punch)"
+        },
+        {
+          "outcome": "loss",
+          "opponent": "Muhammed Lawal",
+          "event": "Rizin Fighting Federation - Iza no Mai",
+          "date": "Dec / 31 / 2015",
+          "method": "KO (Punch)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Vadim Nemkov",
+          "event": "Rizin Fighting Federation - Iza no Mai",
+          "date": "Dec / 31 / 2015",
+          "method": "TKO (Retirement)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Satoshi Ishii",
+          "event": "Rizin Fighting Federation - Saraba no Utake",
+          "date": "Dec / 29 / 2015",
+          "method": "KO (Head Kick and Knees)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Evgeni Kondratov",
+          "event": "ProFC 59 - Battle of Kursk 3",
+          "date": "Nov / 21 / 2015",
+          "method": "KO (Punch)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Michal Fijalka",
+          "event": "GCF 31 - Cage Fight 6",
+          "date": "May / 22 / 2015",
+          "method": "TKO (Corner Stoppage)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Rokas Stambrauskas",
+          "event": "GCF Challenge - Back in the Fight 4",
+          "date": "Mar / 27 / 2015",
+          "method": "TKO (Corner Stoppage)"
+        },
+        {
+          "outcome": "draw",
+          "opponent": "Mikhail Mokhnatkin",
+          "event": "Fight Nights - Battle of Moscow 18",
+          "date": "Dec / 20 / 2014",
+          "method": "Draw (Majority)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Darko Stosic",
+          "event": "GCF Challenge - Cage Fight 5",
+          "date": "Nov / 14 / 2014",
+          "method": "TKO (Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Tomas Penz",
+          "event": "GCF 28 - Cage Fight 4",
+          "date": "Jun / 06 / 2014",
+          "method": "TKO (Flying Knee and Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Viktor Bogutzki",
+          "event": "GCF 27 - Road to the Cage",
+          "date": "Mar / 21 / 2014",
+          "method": "Submission (Rear-Naked Choke)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Martin Solc",
+          "event": "GCF 26 - Fight Night",
+          "date": "Dec / 07 / 2013",
+          "method": "KO (Flying Knee)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Oliver Dohring",
+          "event": "RTC - Rock the Cage 4",
+          "date": "Oct / 12 / 2013",
+          "method": "TKO (Punches)"
+        },
+        {
+          "outcome": "loss",
+          "opponent": "Abdul-Kerim Edilov",
+          "event": "Fight Nights - Battle of Moscow 12",
+          "date": "Jun / 20 / 2013",
+          "method": "Submission (Rear-Naked Choke)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Radovan Estocin",
+          "event": "GCF 23 - MMA Cage Fight 2",
+          "date": "May / 10 / 2013",
+          "method": "KO (Flying Knee and Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Josef Zak",
+          "event": "GCF 19 - Back in the Fight 2",
+          "date": "Feb / 15 / 2013",
+          "method": "TKO (Punches)"
+        },
+        {
+          "outcome": "loss",
+          "opponent": "Bojan Velickovic",
+          "event": "Supreme Fighting Championship 1 - Balkan Fighter Night",
+          "date": "Dec / 09 / 2012",
+          "method": "TKO (Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Denic Strahinja",
+          "event": "RFN - Ring Fight Brno",
+          "date": "Nov / 15 / 2012",
+          "method": "Submission (Triangle Choke)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Martin Vanis",
+          "event": "GCF 17 - Big Cage Ostrava 2",
+          "date": "Oct / 20 / 2012",
+          "method": "TKO (Punches)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Vladimir Eis",
+          "event": "GCF 15 - Justfight Challenger",
+          "date": "Aug / 24 / 2012",
+          "method": "KO (Knee)"
+        },
+        {
+          "outcome": "win",
+          "opponent": "Stanislav Futera",
+          "event": "GCF 10 - Battle in the Cage",
+          "date": "Apr / 07 / 2012",
+          "method": "KO (Punch)"
+        }
+      ]
+    }
+  }
+]
