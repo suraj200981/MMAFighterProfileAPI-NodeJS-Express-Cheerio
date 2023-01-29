@@ -144,7 +144,7 @@ router.get("/search", async (req, res) => {
       return res.status(400).json({ message: "Fighter name is required" });
     }
     try {
-      axios
+      await axios
         .get(process.env.localHostGenerateToken)
         .then((response) => {
           bearer = response.data.bearer;
@@ -153,7 +153,8 @@ router.get("/search", async (req, res) => {
           console.log(error);
         });
 
-      axios.get(
+      //stores each fighter profile in mongo db
+      await axios.get(
         `${process.env.localHostScrapeFighter}=${firstName}&lastName=${lastName}`,
         {
           headers: {
@@ -162,7 +163,7 @@ router.get("/search", async (req, res) => {
         }
       );
 
-      axios
+      await axios
         .get(`${process.env.localHostSearchFighter}=${fighterName}`)
         .then((response) => {
           console.log(response.data[0]);

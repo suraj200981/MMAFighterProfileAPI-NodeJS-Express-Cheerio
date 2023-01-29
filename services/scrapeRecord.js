@@ -1,11 +1,12 @@
 const request = require("request");
 const cheerio = require("cheerio");
 const fs = require("fs");
+const { MongoClient } = require("mongodb");
 
 let data = [];
-
+let check;
 module.exports = {
-  scrape: function step2(enhancedProfileUrlFoundOnPage, res, req) {
+  scrape: async function step2(enhancedProfileUrlFoundOnPage, res, req) {
     let updateRecord = false;
     return new Promise((resolve, reject) => {
       request(
@@ -124,88 +125,131 @@ module.exports = {
 
             let jsonObject = JSON.stringify(data[0]);
 
-            if (!fs.existsSync("FighterProfiles.json")) {
-              jsonObject = JSON.stringify(data);
-              fs.writeFileSync("FighterProfiles.json", jsonObject);
-            } else {
-              //check if same fighter already exists in file
+            //connect to db
+            const client = new MongoClient(process.env.URI_MONGO);
 
-              let check = fs.readFileSync("FighterProfiles.json");
-              let checkJson = JSON.parse(check);
+            check = main(client);
+            console.log(JSON.stringify(check));
+            let checkJson = JSON.parse(check);
+            console.log(checkJson);
 
-              //checking for duplicates
-              for (let x = 0; x < checkJson.length; x++) {
-                if (
-                  checkJson[x].name == fullnameValue &&
-                  checkJson[x].nickname == nickNameValue &&
-                  checkJson[x].country == birthCountryValue &&
-                  checkJson[x].fightingOutOf == fightingOutOfValue &&
-                  checkJson[x].flag == "https://www.sherdog.com" + flagValue &&
-                  checkJson[x].wins == winsValue.replace("Wins", "") &&
-                  checkJson[x].losses == lossesValue.replace("Losses", "") &&
-                  checkJson[x].weightClass == weightClassValue &&
-                  checkJson[x].image ==
-                    "https://www.sherdog.com" + fighterImageValue &&
-                  checkJson[x].height == heightValue &&
-                  checkJson[x].winsBy[0].kotko == kotkoWinsValue &&
-                  checkJson[x].winsBy[0].submissions ==
-                    figtherSubmissionWinsVaule &&
-                  checkJson[x].winsBy[0].decisions ==
-                    figtherDecisonsWinsVaule &&
-                  checkJson[x].fights == opponentDataFiltered
-                ) {
-                  console.log("Fighter already exists in file");
-                  data = []; //empty the global data array
-                  return res.send("Fighter already exists in file!");
-                }
-                //if record exists but information is missing and needs updating
-                else if (
-                  checkJson[x].name == fullnameValue &&
-                  checkJson[x].nickname == nickNameValue
-                ) {
-                  checkJson[x].birthCountry = birthCountryValue;
-                  checkJson[x].fightingOutOf = fightingOutOfValue;
-                  checkJson[x].flag = "https://www.sherdog.com" + flagValue;
-                  checkJson[x].wins = winsValue.replace("Wins", "");
-                  checkJson[x].losses = lossesValue.replace("Losses", "");
-                  checkJson[x].weightClass = weightClassValue;
-                  checkJson[x].image =
-                    "https://www.sherdog.com" + fighterImageValue;
-                  checkJson[x].height = heightValue;
-                  checkJson[x].winsBy[0].kotko = kotkoWinsValue;
-                  checkJson[x].winsBy[0].submissions =
-                    figtherSubmissionWinsVaule;
-                  checkJson[x].winsBy[0].decisions = figtherDecisonsWinsVaule;
-                  checkJson[x].fights = opponentDataFiltered;
-                  updateRecord = true;
-                }
+            //checking for duplicates
+            for (let x = 0; x < checkJson.length; x++) {
+              if (
+                checkJson[x].name == fullnameValue &&
+                checkJson[x].nickname == nickNameValue &&
+                checkJson[x].country == birthCountryValue &&
+                checkJson[x].fightingOutOf == fightingOutOfValue &&
+                checkJson[x].flag == "https://www.sherdog.com" + flagValue &&
+                checkJson[x].wins == winsValue.replace("Wins", "") &&
+                checkJson[x].losses == lossesValue.replace("Losses", "") &&
+                checkJson[x].weightClass == weightClassValue &&
+                checkJson[x].image ==
+                  "https://www.sherdog.com" + fighterImageValue &&
+                checkJson[x].height == heightValue &&
+                checkJson[x].winsBy[0].kotko == kotkoWinsValue &&
+                checkJson[x].winsBy[0].submissions ==
+                  figtherSubmissionWinsVaule &&
+                checkJson[x].winsBy[0].decisions == figtherDecisonsWinsVaule &&
+                checkJson[x].fights == opponentDataFiltered
+              ) {
+                console.log("Fighter already exists in file");
+                data = []; //empty the global data array
+                return res.send("Fighter already exists in file!");
               }
-
-              if (updateRecord) {
-                let updatedData = JSON.stringify(checkJson);
-                fs.writeFileSync("FighterProfiles.json", updatedData);
-                return res.send(
-                  `Fighter profile updated for: ` + fullnameValue
-                );
+              //if record exists but information is missing and needs updating
+              else if (
+                checkJson[x].name == fullnameValue &&
+                checkJson[x].nickname == nickNameValue
+              ) {
+                checkJson[x].birthCountry = birthCountryValue;
+                checkJson[x].fightingOutOf = fightingOutOfValue;
+                checkJson[x].flag = "https://www.sherdog.com" + flagValue;
+                checkJson[x].wins = winsValue.replace("Wins", "");
+                checkJson[x].losses = lossesValue.replace("Losses", "");
+                checkJson[x].weightClass = weightClassValue;
+                checkJson[x].image =
+                  "https://www.sherdog.com" + fighterImageValue;
+                checkJson[x].height = heightValue;
+                checkJson[x].winsBy[0].kotko = kotkoWinsValue;
+                checkJson[x].winsBy[0].submissions = figtherSubmissionWinsVaule;
+                checkJson[x].winsBy[0].decisions = figtherDecisonsWinsVaule;
+                checkJson[x].fights = opponentDataFiltered;
+                updateRecord = true;
               }
-
-              checkJson.push(JSON.parse(jsonObject));
-
-              // stringify the updated array
-              let updatedData = JSON.stringify(checkJson);
-              // write the updated data to the file
-              fs.writeFileSync("FighterProfiles.json", updatedData);
-              res.send(
-                "Scraped data added to json file!\n\n " +
-                  "Go too /api/allProfiles to see all fighters"
-              );
             }
-            resolve(data);
-          } else {
-            reject(error1);
+
+            if (updateRecord) {
+              let updatedData = JSON.stringify(checkJson);
+              //update record in mongo db
+              client.connect((err) => {
+                const db = client.db("FighterProfiles");
+                const collection = db.collection("FighterProfilesCollection");
+                collection.updateOne(
+                  { name: fullnameValue },
+                  { $set: checkJson },
+                  (err, result) => {
+                    if (err) {
+                      console.log(err);
+                    } else {
+                      console.log(
+                        "Fighter profile updated in mongoDB for: " +
+                          fullnameValue
+                      );
+                    }
+                  }
+                );
+              });
+              return res.send(`Fighter profile updated for: ` + fullnameValue);
+            }
+
+            //push new record to mongo db
+            client.connect((err) => {
+              const db = client.db("FighterProfiles");
+              const collection = db.collection("FighterProfilesCollection");
+              collection.insertOne(data[0], (err, result) => {
+                if (err) {
+                  console.log(err);
+                } else {
+                  console.log(
+                    "Fighter profile added to mongoDB for: " + fullnameValue
+                  );
+                }
+              });
+            });
+
+            res.send(
+              "Scraped data added to json file!\n\n " +
+                "Go too /api/allProfiles to see all fighters"
+            );
           }
         }
       );
     });
   }, //end of step2
 };
+
+async function findAllFighterProfiles(client) {
+  return new Promise((resolve, reject) => {
+    const db = client.db("FighterProfiles");
+    const collection = db.collection("FighterProfilesCollection");
+
+    collection.find({}).toArray((err, docs) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(docs);
+      }
+    });
+  });
+}
+async function main(client) {
+  await findAllFighterProfiles(client)
+    .then((result) => {
+      return result;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  console.log(check);
+}
