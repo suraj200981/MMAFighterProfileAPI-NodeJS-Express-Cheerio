@@ -31,6 +31,7 @@ client.connect((err) => {
     console.error(err);
   } else {
     updateProfilesOnServerStart(client, fighterProfiles);
+    console.log("Connected to MongoDB");
   }
 });
 
