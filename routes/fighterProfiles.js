@@ -43,7 +43,6 @@ router.get("/fighter", async (req, res) => {
       let url = `https://www.sherdog.com/stats/fightfinder?association=&weightclass=&SearchTxt=${firstName}+${lastName}&page=${pageNumber}`;
       return findFighter.find(url, req);
     }
-
     // use a loop to repeatedly scrape the next page until the fighter name is found
     (async function loop() {
       let pageNumber = 1; // define pageNumber here
@@ -73,6 +72,7 @@ router.get("/fighter", async (req, res) => {
               // set the flag to exit the loop
               fighterNameFound = true;
               // scrape the fighter's full profile
+
               await scrapeRecord.scrape(
                 enhancedProfileUrlFoundOnPage,
                 res,
@@ -203,18 +203,10 @@ router.get("/all_profiles", (req, res) => {
 });
 
 async function findAllFighterProfiles(client) {
-  return new Promise((resolve, reject) => {
-    const db = client.db("FighterProfiles");
-    const collection = db.collection("FighterProfilesCollection");
-
-    collection.find({}).toArray((err, docs) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(docs);
-      }
-    });
-  });
+  const db = client.db("FighterProfiles");
+  const collection = db.collection("FighterProfilesCollection");
+  let jsonFile = await collection.find({}).toArray();
+  return jsonFile;
 }
 
 module.exports = router;
