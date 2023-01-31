@@ -205,8 +205,9 @@ router.get("/all_profiles", (req, res) => {
 async function findAllFighterProfiles(client) {
   const db = client.db("FighterProfiles");
   const collection = db.collection("FighterProfilesCollection");
+  //colleciton.find all profiles convert to json and return
   let jsonFile = await collection.find({}).toArray();
-  return jsonFile;
+  return JSON.stringify(jsonFile);
 }
 
 module.exports = router;
