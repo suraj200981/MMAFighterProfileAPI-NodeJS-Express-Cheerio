@@ -119,7 +119,7 @@ module.exports = {
               ],
               fights: { opponentDataFiltered },
             });
-
+            //s
             console.log("Profile scraped successfully!");
 
             let jsonObject = JSON.stringify(data[0]);
