@@ -128,7 +128,7 @@ module.exports = {
               jsonObject = JSON.stringify(data);
               fs.writeFileSync("FighterProfiles.json", jsonObject);
             } else {
-              //check if same fighter already exists in file
+              //check if same fighter al ready exists in file
 
               let check = fs.readFileSync("FighterProfiles.json");
               let checkJson = JSON.parse(check);
