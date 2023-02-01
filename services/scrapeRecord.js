@@ -16,7 +16,7 @@ module.exports = {
       .get(enhancedProfileUrlFoundOnPage, {
         headers: { "User-Agent": req.headers["user-agent"] },
       })
-      .then(({ data: html1, status: statusCode1 }) => {
+      .then(async ({ data: html1, status: statusCode1 }) => {
         if (statusCode1 == 200) {
           const $ = cheerio.load(html1);
 
@@ -123,17 +123,20 @@ module.exports = {
           console.log("Profile scraped successfully!");
 
           let jsonObject = JSON.stringify(data[0]);
+
           const client = new MongoClient(process.env.URI_MONGO);
 
-          findAllFighterProfiles(client).then((result) => {
-            console.log(result);
-            check = result;
-
-            // Rest of your code goes here
-          });
+          await findAllFighterProfiles(client)
+            .then((result) => {
+              // Do something with the profiles here
+              check = result;
+            })
+            .catch((error) => {
+              // Handle any errors that might occur
+              console.log(error);
+            });
 
           console.log(check, "test file print");
-
           console.log(JSON.stringify(check));
           let checkJson = JSON.parse(check);
           console.log(checkJson);
@@ -234,5 +237,11 @@ module.exports = {
 async function findAllFighterProfiles(client) {
   const db = client.db("FighterProfiles");
   const collection = db.collection("FighterProfilesCollection");
-  return await collection.find({}).toArray();
+  await collection
+    .find({})
+    .toArray()
+    .then((result) => {
+      testLmao = result;
+    });
+  return testLmao;
 }
