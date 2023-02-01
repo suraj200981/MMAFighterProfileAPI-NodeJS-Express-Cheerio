@@ -7,7 +7,6 @@ const MongoClient = require("mongodb").MongoClient;
 const axios = require("axios");
 
 let data = [];
-let check;
 module.exports = {
   scrape: async function step2(enhancedProfileUrlFoundOnPage, res, req) {
     let updateRecord = false;
@@ -122,23 +121,9 @@ module.exports = {
 
           console.log("Profile scraped successfully!");
 
-          let jsonObject = JSON.stringify(data[0]);
-
           const client = new MongoClient(process.env.URI_MONGO);
 
-          await findAllFighterProfiles(client)
-            .then((result) => {
-              // Do something with the profiles here
-              check = result;
-            })
-            .catch((error) => {
-              // Handle any errors that might occur
-              console.log(error);
-            });
-
-          console.log(check, "test file print");
-          console.log(JSON.stringify(check));
-          let checkJson = JSON.parse(check);
+          checkJson = await findAllFighterProfiles(client);
           console.log(checkJson);
 
           //checking for duplicates
@@ -189,24 +174,10 @@ module.exports = {
 
           if (updateRecord) {
             let updatedData = JSON.stringify(checkJson);
-            //update record in mongo db
-            client.connect((err) => {
-              const db = client.db("FighterProfiles");
-              const collection = db.collection("FighterProfilesCollection");
-              collection.updateOne(
-                { name: fullnameValue },
-                { $set: checkJson },
-                (err, result) => {
-                  if (err) {
-                    console.log(err);
-                  } else {
-                    console.log(
-                      "Fighter profile updated in mongoDB for: " + fullnameValue
-                    );
-                  }
-                }
-              );
-            });
+
+            //update record in mongo db with updatedData
+            await updateFighterProfile(client, updatedData);
+
             return res.send(`Fighter profile updated for: ` + fullnameValue);
           }
 
@@ -244,4 +215,22 @@ async function findAllFighterProfiles(client) {
       testLmao = result;
     });
   return testLmao;
+}
+
+async function updateFighterProfile(client, data) {
+  await client.connect((err) => {
+    const db = client.db("FighterProfiles");
+    const collection = db.collection("FighterProfilesCollection");
+    collection.updateOne(
+      { name: fullnameValue },
+      { $set: { data } },
+      (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log("Fighter profile updated for: " + fullnameValue);
+        }
+      }
+    );
+  });
 }
