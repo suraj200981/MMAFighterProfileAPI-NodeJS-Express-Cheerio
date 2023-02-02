@@ -3,7 +3,13 @@ const router = express.Router();
 const randomUseragent = require("random-useragent");
 const fs = require("fs");
 const axios = require("axios");
+const circularJSON = require("circular-json");
 
+require("dotenv").config();
+
+//passed mongo client to services
+const MongoClient = require("mongodb").MongoClient;
+const client = new MongoClient(process.env.URI_MONGO);
 //import services
 const findFighter = require("../services/findFighter.js");
 const scrapeRecord = require("../services/scrapeRecord.js");
@@ -29,7 +35,7 @@ router.get("/fighter", async (req, res) => {
     let firstName = req.query.firstName.toLowerCase();
     let lastName = req.query.lastName.toLowerCase();
 
-    console.log("query params to scrape: " + firstName + lastName);
+    console.log("query params to scrape: " + firstName + " " + lastName);
 
     // initialize a variable to keep track of whether the fighter name has been found
     let fighterNameFound = false;
@@ -39,7 +45,6 @@ router.get("/fighter", async (req, res) => {
       let url = `https://www.sherdog.com/stats/fightfinder?association=&weightclass=&SearchTxt=${firstName}+${lastName}&page=${pageNumber}`;
       return findFighter.find(url, req);
     }
-
     // use a loop to repeatedly scrape the next page until the fighter name is found
     (async function loop() {
       let pageNumber = 1; // define pageNumber here
@@ -69,6 +74,7 @@ router.get("/fighter", async (req, res) => {
               // set the flag to exit the loop
               fighterNameFound = true;
               // scrape the fighter's full profile
+
               await scrapeRecord.scrape(
                 enhancedProfileUrlFoundOnPage,
                 res,
@@ -98,7 +104,10 @@ router.get("/token", (req, res) => {
 //search for specific fighter
 router.get("/search", async (req, res) => {
   let fighterName = req.query.name.toLowerCase();
-  let json = JSON.parse(fs.readFileSync("FighterProfiles.json"));
+  let json;
+  //get fighter profiles from mongo db and json parse it
+  json = await findAllFighterProfiles(client);
+
   let fightersFound = [];
   let count = 0;
 
@@ -117,7 +126,6 @@ router.get("/search", async (req, res) => {
 
   for (let x = 0; x < json.length; x++) {
     count = 0;
-    console.log(json[x].name);
     for (let k = 0; k < fighterName.length; k++) {
       if (
         fighterName.toLowerCase().charAt(k) ==
@@ -137,8 +145,8 @@ router.get("/search", async (req, res) => {
       return res.status(400).json({ message: "Fighter name is required" });
     }
     try {
-      const reponseToken = await axios
-        .get("https://mma-fighter-profile-api-appdev.herokuapp.com/api/token")
+      await axios
+        .get(process.env.localHostGenerateToken)
         .then((response) => {
           bearer = response.data.bearer;
         })
@@ -146,19 +154,25 @@ router.get("/search", async (req, res) => {
           console.log(error);
         });
 
-      const responseFigther = await axios.get(
-        `https://mma-fighter-profile-api-appdev.herokuapp.com/api/fighter?firstName=${firstName}&lastName=${lastName}`,
-        {
-          headers: {
-            authorization: bearer,
-          },
-        }
-      );
-
-      const finalResponseFighter = await axios
+      //stores each fighter profile in mongo db
+      await axios
         .get(
-          `https://mma-fighter-profile-api-appdev.herokuapp.com/api/search?name=${fighterName}`
+          `${process.env.localHostScrapeFighter}=${firstName}&lastName=${lastName}`,
+          {
+            headers: {
+              authorization: bearer,
+            },
+          }
         )
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      await axios
+        .get(`${process.env.localHostSearchFighter}=${fighterName}`)
         .then((response) => {
           console.log(response.data[0]);
           fightersFound.push(response.data[0]);
@@ -178,8 +192,28 @@ router.get("/search", async (req, res) => {
 });
 
 router.get("/all_profiles", (req, res) => {
-  let json = fs.readFileSync("FighterProfiles.json");
-  return res.send(json);
+  let json;
+
+  //get fighter profiles from mongo db and json parse it
+  client.connect((err) => {
+    const db = client.db("FighterProfiles");
+    const collection = db.collection("FighterProfilesCollection");
+
+    collection.find({}).toArray((err, docs) => {
+      if (err) {
+        console.log(err);
+      } else {
+        json = docs;
+        return res.send(json);
+      }
+    });
+  });
 });
+
+async function findAllFighterProfiles(client) {
+  const db = client.db("FighterProfiles");
+  const collection = db.collection("FighterProfilesCollection");
+  return await collection.find({}).toArray();
+}
 
 module.exports = router;
