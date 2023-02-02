@@ -5,6 +5,7 @@ const fs = require("fs");
 const MongoClient = require("mongodb").MongoClient;
 
 const axios = require("axios");
+const circularJSON = require("circular-json");
 
 let data = [];
 module.exports = {
@@ -123,7 +124,7 @@ module.exports = {
 
           const client = new MongoClient(process.env.URI_MONGO);
 
-          checkJson = await findAllFighterProfiles(client);
+          let checkJson = await findAllFighterProfiles(client);
           console.log(checkJson);
 
           //checking for duplicates
@@ -163,7 +164,7 @@ module.exports = {
               checkJson[x].weightClass = weightClassValue;
               checkJson[x].image =
                 "https://www.sherdog.com" + fighterImageValue;
-              checkJson[x].height = heightValue;
+              checkJson[x].height = "lmao";
               checkJson[x].winsBy[0].kotko = kotkoWinsValue;
               checkJson[x].winsBy[0].submissions = figtherSubmissionWinsVaule;
               checkJson[x].winsBy[0].decisions = figtherDecisonsWinsVaule;
@@ -173,33 +174,40 @@ module.exports = {
           }
 
           if (updateRecord) {
-            let updatedData = JSON.stringify(checkJson);
+            let updatedData = circularJSON.stringify(checkJson);
 
             //update record in mongo db with updatedData
-            await updateFighterProfile(client, updatedData);
-
-            return res.send(`Fighter profile updated for: ` + fullnameValue);
-          }
-
-          //push new record to mongo db
-          client.connect((err) => {
-            const db = client.db("FighterProfiles");
-            const collection = db.collection("FighterProfilesCollection");
-            collection.insertOne(data[0], (err, result) => {
-              if (err) {
-                console.log(err);
-              } else {
-                console.log(
-                  "Fighter profile added to mongoDB for: " + fullnameValue
+            await updateFighterProfile(client, updatedData)
+              .then((r) => {
+                console.log(r, "updated test lol");
+                return res.send(
+                  `Fighter profile updated for: ` + fullnameValue
                 );
-              }
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          } else {
+            //push new record to mongo db
+            client.connect((err) => {
+              const db = client.db("FighterProfiles");
+              const collection = db.collection("FighterProfilesCollection");
+              collection.insertOne(data[0], (err, result) => {
+                if (err) {
+                  console.log(err);
+                } else {
+                  console.log(
+                    "Fighter profile added to mongoDB for: " + fullnameValue
+                  );
+                }
+              });
             });
-          });
 
-          res.send(
-            "Scraped data added to json file!\n\n " +
-              "Go too /api/allProfiles to see all fighters"
-          );
+            return res.send(
+              "Scraped data added to json file!\n\n " +
+                "Go too /api/allProfiles to see all fighters"
+            );
+          }
         }
       });
   },
@@ -217,20 +225,9 @@ async function findAllFighterProfiles(client) {
   return testLmao;
 }
 
-async function updateFighterProfile(client, data) {
-  await client.connect((err) => {
-    const db = client.db("FighterProfiles");
-    const collection = db.collection("FighterProfilesCollection");
-    collection.updateOne(
-      { name: fullnameValue },
-      { $set: { data } },
-      (err, result) => {
-        if (err) {
-          console.log(err);
-        } else {
-          console.log("Fighter profile updated for: " + fullnameValue);
-        }
-      }
-    );
-  });
+async function updateFighterProfile(client, dataval) {
+  const db = client.db("FighterProfiles");
+  const collection = db.collection("FighterProfilesCollection");
+  await collection.deleteMany();
+  await collection.insertMany(JSON.parse(dataval));
 }
