@@ -125,7 +125,7 @@ module.exports = {
           const client = new MongoClient(process.env.URI_MONGO);
 
           let checkJson = await findAllFighterProfiles(client);
-          console.log(checkJson);
+          console.log(checkJson, "all fighters returned");
 
           //checking for duplicates
           for (let x = 0; x < checkJson.length; x++) {
@@ -179,7 +179,7 @@ module.exports = {
             //update record in mongo db with updatedData
             await updateFighterProfile(client, updatedData)
               .then((r) => {
-                console.log(r, "updated test lol");
+                console.log("Fighter profile updated for: " + fullnameValue);
                 return res.send(
                   `Fighter profile updated for: ` + fullnameValue
                 );
@@ -189,22 +189,20 @@ module.exports = {
               });
           } else {
             //push new record to mongo db
-            client.connect((err) => {
-              const db = client.db("FighterProfiles");
-              const collection = db.collection("FighterProfilesCollection");
-              collection.insertOne(data[0], (err, result) => {
-                if (err) {
-                  console.log(err);
-                } else {
-                  console.log(
-                    "Fighter profile added to mongoDB for: " + fullnameValue
-                  );
-                }
-              });
+            //push new record to local array to be pushed to mongo db
+            checkJson.push(data[0]);
+            await updateFighterProfile(
+              client,
+              circularJSON.stringify(checkJson)
+            ).then((r) => {
+              console.log(
+                "Scraped data added to mongo db!\n\n " +
+                  "Go too /api/allProfiles to see all fighters"
+              );
             });
 
             return res.send(
-              "Scraped data added to json file!\n\n " +
+              "Scraped data added to mongo db!\n\n " +
                 "Go too /api/allProfiles to see all fighters"
             );
           }
