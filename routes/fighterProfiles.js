@@ -3,6 +3,8 @@ const router = express.Router();
 const randomUseragent = require("random-useragent");
 const fs = require("fs");
 const axios = require("axios");
+const circularJSON = require("circular-json");
+
 require("dotenv").config();
 
 //passed mongo client to services
@@ -33,7 +35,7 @@ router.get("/fighter", async (req, res) => {
     let firstName = req.query.firstName.toLowerCase();
     let lastName = req.query.lastName.toLowerCase();
 
-    console.log("query params to scrape: " + firstName + lastName);
+    console.log("query params to scrape: " + firstName + " " + lastName);
 
     // initialize a variable to keep track of whether the fighter name has been found
     let fighterNameFound = false;
@@ -124,7 +126,6 @@ router.get("/search", async (req, res) => {
 
   for (let x = 0; x < json.length; x++) {
     count = 0;
-    console.log(json[x].name);
     for (let k = 0; k < fighterName.length; k++) {
       if (
         fighterName.toLowerCase().charAt(k) ==
@@ -154,14 +155,21 @@ router.get("/search", async (req, res) => {
         });
 
       //stores each fighter profile in mongo db
-      await axios.get(
-        `${process.env.localHostScrapeFighter}=${firstName}&lastName=${lastName}`,
-        {
-          headers: {
-            authorization: bearer,
-          },
-        }
-      );
+      await axios
+        .get(
+          `${process.env.localHostScrapeFighter}=${firstName}&lastName=${lastName}`,
+          {
+            headers: {
+              authorization: bearer,
+            },
+          }
+        )
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
 
       await axios
         .get(`${process.env.localHostSearchFighter}=${fighterName}`)
@@ -205,9 +213,7 @@ router.get("/all_profiles", (req, res) => {
 async function findAllFighterProfiles(client) {
   const db = client.db("FighterProfiles");
   const collection = db.collection("FighterProfilesCollection");
-  //colleciton.find all profiles convert to json and return
-  let jsonFile = await collection.find({}).toArray();
-  return JSON.stringify(jsonFile);
+  return await collection.find({}).toArray();
 }
 
 module.exports = router;

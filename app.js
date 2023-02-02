@@ -5,7 +5,6 @@ const fightersRouter = require("./routes/fighterProfiles");
 const fighterAnalysis = require("./routes/fighterAnalysis");
 
 const { MongoClient } = require("mongodb");
-const fs = require("fs");
 require("dotenv").config();
 
 //directs to routes
@@ -15,7 +14,6 @@ app.use("/api", fightersRouter);
 let port = process.env.PORT || 8080; // live and local env port
 
 //read fighter profiles json
-const fighterProfiles = fs.readFileSync("FighterProfiles.json");
 
 app.listen(port, function (err) {
   if (err) console.log("Error in server setup");

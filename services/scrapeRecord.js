@@ -218,9 +218,9 @@ async function findAllFighterProfiles(client) {
     .find({})
     .toArray()
     .then((result) => {
-      testLmao = result;
+      allFighters = result;
     });
-  return testLmao;
+  return allFighters;
 }
 
 async function updateFighterProfile(client, dataval) {
