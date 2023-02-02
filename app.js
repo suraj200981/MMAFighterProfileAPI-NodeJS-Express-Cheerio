@@ -30,15 +30,6 @@ client.connect((err) => {
   if (err) {
     console.error(err);
   } else {
-    updateProfilesOnServerStart(client, fighterProfiles);
     console.log("Connected to MongoDB");
   }
 });
-
-//function to delete and update collection with json file on server start
-function updateProfilesOnServerStart(client, fighterProfiles) {
-  const db = client.db("FighterProfiles");
-  const collection = db.collection("FighterProfilesCollection");
-  collection.deleteMany();
-  collection.insertMany(JSON.parse(fighterProfiles));
-}
