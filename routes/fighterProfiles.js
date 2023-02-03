@@ -146,7 +146,7 @@ router.get("/search", async (req, res) => {
     }
     try {
       await axios
-        .get(process.env.devEnvironmentGenerateToken)
+        .get(process.env.localHostGenerateToken)
         .then((response) => {
           bearer = response.data.bearer;
         })
@@ -157,7 +157,7 @@ router.get("/search", async (req, res) => {
       //stores each fighter profile in mongo db
       await axios
         .get(
-          `${process.env.devEnvironmentScrapeFighter}=${firstName}&lastName=${lastName}`,
+          `${process.env.localHostScrapeFighter}=${firstName}&lastName=${lastName}`,
           {
             headers: {
               authorization: bearer,
@@ -172,7 +172,7 @@ router.get("/search", async (req, res) => {
         });
 
       await axios
-        .get(`${process.env.devEnvironmentSearchFighter}=${fighterName}`)
+        .get(`${process.env.localHostSearchFighter}=${fighterName}`)
         .then((response) => {
           console.log(response.data[0]);
           fightersFound.push(response.data[0]);
