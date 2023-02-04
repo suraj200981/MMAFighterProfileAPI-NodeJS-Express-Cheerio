@@ -179,6 +179,7 @@ router.get("/search", async (req, res) => {
         })
         .catch((error) => {
           console.log(error);
+          return res.status(500).json({ message: "An error occured" });
         });
 
       return res.send(fightersFound);
