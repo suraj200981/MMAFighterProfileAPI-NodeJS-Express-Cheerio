@@ -147,7 +147,7 @@ router.get("/search", async (req, res) => {
     try {
       let errorAtScrape = false;
       await axios
-        .get(process.env.localHostGenerateToken)
+        .get(process.env.devEnvironmentGenerateToken)
         .then((response) => {
           bearer = response.data.bearer;
         })
@@ -158,7 +158,7 @@ router.get("/search", async (req, res) => {
       //stores each fighter profile in mongo db
       await axios
         .get(
-          `${process.env.localHostScrapeFighter}=${firstName}&lastName=${lastName}`,
+          `${process.env.devEnvironmentScrapeFighter}=${firstName}&lastName=${lastName}`,
           {
             headers: {
               authorization: bearer,
@@ -179,7 +179,7 @@ router.get("/search", async (req, res) => {
         return res.status(400).json({ message: "An error whilst scraping" });
       }
       await axios
-        .get(`${process.env.localHostSearchFighter}=${fighterName}`)
+        .get(`${process.env.devEnvironmentSearchFighter}=${fighterName}`)
         .then((response) => {
           console.log(response.data[0]);
           fightersFound.push(response.data[0]);
