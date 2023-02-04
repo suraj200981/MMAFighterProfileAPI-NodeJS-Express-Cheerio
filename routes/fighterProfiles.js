@@ -145,8 +145,9 @@ router.get("/search", async (req, res) => {
       return res.status(400).json({ message: "Fighter name is required" });
     }
     try {
+      let errorAtScrape = false;
       await axios
-        .get(process.env.devEnvironmentGenerateToken)
+        .get(process.env.localHostGenerateToken)
         .then((response) => {
           bearer = response.data.bearer;
         })
@@ -157,7 +158,7 @@ router.get("/search", async (req, res) => {
       //stores each fighter profile in mongo db
       await axios
         .get(
-          `${process.env.devEnvironmentScrapeFighter}=${firstName}&lastName=${lastName}`,
+          `${process.env.localHostScrapeFighter}=${firstName}&lastName=${lastName}`,
           {
             headers: {
               authorization: bearer,
@@ -165,21 +166,27 @@ router.get("/search", async (req, res) => {
           }
         )
         .then((response) => {
-          console.log(response.data);
+          console.log(response.data, "success");
+          console.log("oiansfoifn");
         })
         .catch((error) => {
           console.log(error);
+          console.log("iiamfdo");
+          errorAtScrape = true;
         });
 
+      if (errorAtScrape) {
+        return res.status(400).json({ message: "An error whilst scraping" });
+      }
       await axios
-        .get(`${process.env.devEnvironmentSearchFighters}=${fighterName}`)
+        .get(`${process.env.localHostSearchFighter}=${fighterName}`)
         .then((response) => {
           console.log(response.data[0]);
           fightersFound.push(response.data[0]);
         })
         .catch((error) => {
           console.log(error);
-          return res.status(500).json({ message: "An error occured" });
+          return res.status(400).json({ message: "An error occured" });
         });
 
       return res.send(fightersFound);
