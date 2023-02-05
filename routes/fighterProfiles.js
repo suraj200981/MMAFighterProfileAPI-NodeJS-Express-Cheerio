@@ -218,6 +218,23 @@ router.get("/all_profiles", (req, res) => {
   });
 });
 
+//delete all profiles by specific fighter name
+router.delete("/deleteProfile", async (req, res) => {
+  let fighterName = req.query.name.toLowerCase();
+  //delete profile from mongo db
+  const db = client.db("FighterProfiles");
+  const collection = db.collection("FighterProfilesCollection");
+  await collection
+    .deleteMany({ name: "Tom Aaron" })
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  return res.send("profile deleted successfully for " + fighterName);
+});
+
 async function findAllFighterProfiles(client) {
   const db = client.db("FighterProfiles");
   const collection = db.collection("FighterProfilesCollection");
