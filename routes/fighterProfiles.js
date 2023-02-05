@@ -219,20 +219,19 @@ router.get("/all_profiles", (req, res) => {
 });
 
 //delete all profiles by specific fighter name
-router.delete("/deleteProfile", async (req, res) => {
-  let fighterName = req.query.name.toLowerCase();
+router.get("/deleteProfile", async (req, res) => {
   //delete profile from mongo db
   const db = client.db("FighterProfiles");
   const collection = db.collection("FighterProfilesCollection");
   await collection
-    .deleteMany({ name: "Tom Aaron" })
+    .deleteMany({ name: req.query.name })
     .then((result) => {
       console.log(result);
     })
     .catch((error) => {
       console.log(error);
     });
-  return res.send("profile deleted successfully for " + fighterName);
+  return res.send("profile deleted successfully for " + req.query.name);
 });
 
 async function findAllFighterProfiles(client) {
