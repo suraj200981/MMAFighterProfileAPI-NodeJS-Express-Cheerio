@@ -50,7 +50,7 @@ router.get("/fighter", async (req, res) => {
       let pageNumber = 1; // define pageNumber here
       let infinityLoopCount = 1;
       while (!fighterNameFound) {
-        if (pageNumber == 30) {
+        if (pageNumber == 27) {
           return res.status(400).json({ message: "Fighter not found" });
         }
         console.log(`Searching page ${pageNumber}...`);
@@ -167,11 +167,11 @@ router.get("/search", async (req, res) => {
         )
         .then((response) => {
           console.log(response.data, "success");
-          console.log("oiansfoifn");
+          console.log("unsuccessful scrape");
         })
         .catch((error) => {
           console.log(error);
-          console.log("iiamfdo");
+          console.log("successful scrape");
           errorAtScrape = true;
         });
 

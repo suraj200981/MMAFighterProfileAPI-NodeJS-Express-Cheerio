@@ -11,7 +11,7 @@ let data = [];
 module.exports = {
   scrape: async function step2(enhancedProfileUrlFoundOnPage, res, req) {
     let updateRecord = false;
-
+    data = [];
     await axios
       .get(enhancedProfileUrlFoundOnPage, {
         headers: { "User-Agent": req.headers["user-agent"] },
