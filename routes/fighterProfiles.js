@@ -225,7 +225,8 @@ router.delete("/deleteProfile", async (req, res) => {
   const db = client.db("FighterProfiles");
   const collection = db.collection("FighterProfilesCollection");
   await collection
-    .deleteMany({ name: "Tom Aaron" })
+    // .deleteMany({ name: { $regex: req.query.name } }) //delete specific profile
+    .deleteMany({ name: { $regex: ".*" } }) //delete all profiles
     .then((result) => {
       console.log(result);
     })
