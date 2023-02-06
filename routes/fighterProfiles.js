@@ -50,7 +50,7 @@ router.get("/fighter", async (req, res) => {
       let pageNumber = 1; // define pageNumber here
       let infinityLoopCount = 1;
       while (!fighterNameFound) {
-        if (pageNumber == 30) {
+        if (pageNumber == 27) {
           return res.status(400).json({ message: "Fighter not found" });
         }
         console.log(`Searching page ${pageNumber}...`);
@@ -167,11 +167,11 @@ router.get("/search", async (req, res) => {
         )
         .then((response) => {
           console.log(response.data, "success");
-          console.log("oiansfoifn");
+          console.log("unsuccessful scrape");
         })
         .catch((error) => {
           console.log(error);
-          console.log("iiamfdo");
+          console.log("successful scrape");
           errorAtScrape = true;
         });
 
@@ -219,21 +219,19 @@ router.get("/all_profiles", (req, res) => {
 });
 
 //delete all profiles by specific fighter name
-router.delete("/deleteProfile", async (req, res) => {
-  let fighterName = req.query.name.toLowerCase();
+router.get("/deleteProfile", async (req, res) => {
   //delete profile from mongo db
   const db = client.db("FighterProfiles");
   const collection = db.collection("FighterProfilesCollection");
   await collection
-    // .deleteMany({ name: { $regex: req.query.name } }) //delete specific profile
-    .deleteMany({ name: { $regex: ".*" } }) //delete all profiles
+    .deleteMany({ name: "Tom Aaron" })
     .then((result) => {
       console.log(result);
     })
     .catch((error) => {
       console.log(error);
     });
-  return res.send("profile deleted successfully for " + fighterName);
+  return res.send("profile deleted successfully for " + req.query.name);
 });
 
 async function findAllFighterProfiles(client) {
