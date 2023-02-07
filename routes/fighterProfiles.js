@@ -234,6 +234,21 @@ router.get("/deleteProfile", async (req, res) => {
   return res.send("profile deleted successfully for " + req.query.name);
 });
 
+router.get("/allNames", async (req, res) => {
+  let json;
+
+  //get fighter profiles from mongo db and json parse it
+  json = await findAllFighterProfiles(client);
+
+  let resultArr = [];
+
+  for (let x = 0; x < json.length; x++) {
+    resultArr.push(json[x].name);
+  }
+
+  return res.send(resultArr);
+});
+
 async function findAllFighterProfiles(client) {
   const db = client.db("FighterProfiles");
   const collection = db.collection("FighterProfilesCollection");
