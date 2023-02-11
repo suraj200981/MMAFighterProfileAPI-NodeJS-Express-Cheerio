@@ -11,7 +11,7 @@ require("dotenv").config();
 app.use("/api", fightersRouter);
 // app.use("/analysis", fighterAnalysis);
 
-let port = process.env.PORT || 8080; // live and local env port
+let port = process.env.PORT || 8080; // live and local env port number
 
 //read fighter profiles json
 
