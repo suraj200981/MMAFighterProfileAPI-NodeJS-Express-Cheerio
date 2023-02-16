@@ -9,7 +9,7 @@ require("dotenv").config();
 
 //directs to routes
 app.use("/api", fightersRouter);
-// app.use("/analysis", fighterAnalysis);
+app.use("/analysis", fighterAnalysis);
 
 let port = process.env.PORT || 8080; // live and local env port number
 
