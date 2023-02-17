@@ -195,7 +195,12 @@ router.get("/search", async (req, res) => {
       return res.status(500).json({ message: "An error occured" });
     }
   } else {
-    return res.send(fightersFound);
+    finalFightersFound = fightersFound.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+    });
+    return res.send(finalFightersFound);
   }
 });
 
